@@ -1,0 +1,112 @@
+#GlavFr{
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*@media screen and (max-width: 872px){
+  #GlavFr{
+    position: absolute;
+    top: 65%;
+  }
+}*/
+
+#R{
+  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
+
+#E{
+  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
+
+#Reg{
+  border-bottom: 1px solid rgba(45,45,45,0.98);;
+ }
+
+#Ent{
+  border-bottom: 1px solid rgba(45,45,45,0.98);
+}
+
+.RegaAvt{
+  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.Bord{
+  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  text-align: center;
+  height: 30px;
+  margin-left: 10px;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  outline: none;
+}
+
+.Bord:hover{
+  border: 1px solid rgba(45,45,45,0.98);
+  transition: 0.3s;
+}
+
+#Log{
+  width: 249px;
+  margin-left: 19px;
+}
+
+#Eml{
+  width: 249px;
+  margin-left: 22px;
+}
+
+#Pass{
+  width: 249px;
+  margin-left: 6px;
+}
+
+#Password{
+  width: 249px;
+  margin-left: 6px;
+}
+
+.Knop{
+  float: right;
+}
+
+#LogAndEm{
+  width: 249px;
+  margin-left: 22px;
+}
+
+.Regivxod{
+  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: white;
+  font-size: 17px;
+  border: 1px solid rgba(45,45,45,0.98);
+  border-radius: 7px;
+  padding: 10px 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.Regivxod:hover{
+  background: rgba(45,45,45,0.98);
+  color: white;
+  transition-duration: 0.2s;
+}
+
+#B{
+  margin-left: 24px;
+}
+
+#Bor{
+  margin-left: 24px;
+}

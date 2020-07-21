@@ -1,0 +1,37 @@
+
+<div >
+  <app-header></app-header>
+</div>
+
+<div id = "Com">
+  <div id = "Zagol">
+  <h1 id = "Company">О нас</h1>
+  </div>
+  <p class = "Title">мы команда ананимусов</p>
+  <p class = "OCom">Мы занимаемся отделкой рабочих и жилых помещений.</p>
+  <div class="imgCont">
+    <img src="/assets/img/2-bY3yIHIa4.jpg">
+    <img src="/assets/img/2-bY3yIHIa4.jpg">
+    <img src="/assets/img/2-bY3yIHIa4.jpg">
+
+  </div>
+
+  <p class = "OCom">Мы гарантируем:</p>
+  <label><p class="row">100% выполнение заказа</p></label><br>
+  <label><p class="row">Высокий уровень качества</p></label><br>
+  <label><p class="row">Отсутсвие задержек</p></label>
+  <div id = "Zagol">
+  </div>
+  <p class="OCom"> Отзывы клиентов</p>
+  <div *ngIf="PersonalAreai.id != null">
+    <label>Отзыв</label>
+    <input type="text" [(ngModel)]="Otziv">
+    <button (click)="newOtziv()">Отправиит</button>
+  </div>
+  <div id="div_comment" *ngFor=" let Comment of Commenti">
+    <label class="log_shap">{{Comment.login}}
+      {{Comment.data}}</label> <br>
+    <label class="coment">{{Comment.productFeedBack}}</label>
+  </div>
+
+</div>

@@ -1,0 +1,175 @@
+.Options{
+    float: left;
+    margin-left: 15px;
+    border-right: 1px solid black;
+}
+
+.Lich{
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    background: white;
+    border: 1px solid rgba(45,45,45,0.98);
+    border-radius: 7px;
+    margin-right: 70px;
+    outline: none;
+}
+
+#L{
+    padding: 10px 80px 10px 10px;
+}
+
+#I{
+    padding: 10px 19.6px 10px 10px;
+}
+
+#C{
+    padding: 10px 61.37px 10px 10px;
+}
+
+.Lich:hover{
+    background: rgba(45,45,45,0.98);
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#Avatar{
+    float: left;
+    margin-bottom: 19px;
+    background-image: url('http://i.stack.imgur.com/Dj7eP.jpg');
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 50%;
+}
+
+.GlavForm{
+    float: right;
+    margin-left: 62px;
+}
+
+#GlavBlock{
+    float: left;
+    margin-top: 94px;
+    width: 95%;
+}
+
+#NickName{
+    float: right;
+    margin-left: 58px;
+}
+
+@media screen and (max-width: 1000px){
+    #GlavBlock{
+      margin-top: 154px;
+    }
+  }
+
+.Nick{
+    margin: 0;
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+.Name{
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover{
+    border: 1px solid rgba(45,45,45,0.98);
+    transition: 0.3s;
+}
+
+.IzmAvt{
+    float: left;
+    clear: both;
+}
+
+.udata{
+    float:left;
+}
+
+.data{
+    /*border-bottom: 1px solid rgba(45,45,45,0.98);*/
+    margin-bottom: 22px;
+    font-size: 16px;
+}
+
+#GlavData{
+    float: left;
+    margin-left: 62px;
+}
+
+#fio{
+    margin-left: 104px;
+}
+
+#birthday{
+    margin-left: 22px;
+}
+
+#telephone{
+    margin-left: 72px;
+}
+
+#adress{
+    margin-left: 92px;
+}
+
+#postcode{
+    margin-left: 1px;
+}
+
+.entr{
+    margin-left: 10px;
+    width: 205px;
+    height: 30px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    outline: none;
+}
+
+.entr:hover{
+    border: 1px solid rgba(45,45,45,0.98);
+    transition: 0.3s;
+}
+
+.save{
+  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: white;
+  font-size: 17px;
+  border: 1px solid rgba(45,45,45,0.98);
+  border-radius: 7px;
+  padding: 10px 18px;
+  color: black;
+  cursor: pointer;
+  outline: none;
+}
+
+.save:hover{
+    color: white;
+    background: rgba(45,45,45,0.98);
+    transition: 0.3s;
+}
+
+.changedata{
+    font-size: 22px;
+    padding-bottom: 10px;
+    display: flex;
+    border-bottom: 1px solid;
+    justify-content: center;
+}

@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div id = "GlavBlock">
+  <div class = "Options">
+      <p> <span class = "glyphicon glyphicon-home" style = "font-size: 18px; margin-right: 15px;"></span> <input type = "submit" routerLink="/profile" value = "Главная" class = "Lich" id = "L"></p>
+      <p> <span class = "glyphicon glyphicon-user" style = "font-size: 18px; margin-right: 15px;"></span> <input type = "submit"  value = "Личные данные" class = "Lich" id = "I"></p>
+      <p> <span class = "glyphicon glyphicon-cog" style = "font-size: 18px; margin-right: 15px;"></span> <input type = "submit" routerLink="/settings" value = "Настройки" class = "Lich" id = "C"></p>
+     
+    </div>
+  <div id = "GlavData">
+   <div class = "udata">
+      <p class = "data"><label>Логин: <span class = "borbot">{{PersonalAreai.login}}</span></label></p>
+      <p class = "data"><label>Email: <span class = "borbot">{{PersonalAreai.email}}</span></label></p>
+      <p class = "data"><label>ФИО: <span class = "borbot">{{PersonalAreai.fio}}</span></label>
+      <p class = "data"><label>Дата рождения: <span class = "borbot">{{PersonalAreai.dateBirth}}</span></label></p>
+   </div>
+   <div class = "ud">
+    <p class = "data"><label>Телефон: <span class = "borbot">{{PersonalAreai.telefon}}</span></label></p>
+    <p class = "data"><label>Адрес: <span class = "borbot">{{PersonalAreai.addres}}</span></label></p>
+    <p class = "data"><label>Почтовый индекс: <span class = "borbot">{{PersonalAreai.postcode}}</span></label></p>
+   </div>
+   </div>
+  </div>

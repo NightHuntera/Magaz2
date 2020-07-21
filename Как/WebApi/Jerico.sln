@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JericoWebApi", "JericoWebApi\JericoWebApi.csproj", "{E95AE4EC-51D2-4511-BDDC-11831128DA78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JericoDataBase", "JericoDataBase\JericoDataBase.csproj", "{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Debug|x64.Build.0 = Debug|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Debug|x86.Build.0 = Debug|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Release|x64.ActiveCfg = Release|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Release|x64.Build.0 = Release|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Release|x86.ActiveCfg = Release|Any CPU
+		{E95AE4EC-51D2-4511-BDDC-11831128DA78}.Release|x86.Build.0 = Release|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Debug|x64.Build.0 = Debug|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Debug|x86.Build.0 = Debug|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Release|x64.ActiveCfg = Release|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Release|x64.Build.0 = Release|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C0DBDE9-13D6-4B91-AC7D-FF976358BC38}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EE440AE-F0AC-4F2E-AEFF-9B6D66E4F4DB}
+	EndGlobalSection
+EndGlobal

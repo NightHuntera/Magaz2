@@ -1,0 +1,96 @@
+html{
+  height: 100%;
+}
+
+body{
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#Company{
+  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: black;
+  position: relative;
+}
+.Title{
+  font-size: 72px;
+  text-align: center;
+}
+
+img{
+  position: relative;
+  width: 27%;
+  text-align: center;
+  height: 400px;
+  max-height: 100%;
+  padding: 2%;
+  border: darkgrey solid 2px;
+  display: block;
+  margin: 1%;
+
+
+
+}
+
+.imgCont{
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: row;
+}
+
+.OCom{
+  font-famsily: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  color: black;
+}
+.row{
+  font-size: 25px;
+  background-color: rgba(0,255,0,0.3);
+  margin-left: 15px;
+}
+#Com{
+  float: left;
+  width: 95%;
+  margin-left: 15px;
+  margin-top: 94px;
+  animation-name: anime;
+  animation-duration: 1s;
+}
+
+#Zagol{
+  border-bottom: 1px solid rgba(45,45,45,0.98);
+  margin-bottom: 23px;
+  width: 25%;
+}
+
+@media screen and (max-width: 418px){
+  #Com{
+    margin-top: 120px;
+  }
+}
+
+@media screen and (max-width: 289px){
+  #Com{
+    margin-top: 196px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  #Com{
+    margin-top: 154px;
+  }
+}
+
+/*@keyframes anime{
+  from{
+    margin-left: 100%;
+    width: 300%;
+  }
+  to{
+    margin-left: 15px;
+    width: 100%;
+  }
+}*/

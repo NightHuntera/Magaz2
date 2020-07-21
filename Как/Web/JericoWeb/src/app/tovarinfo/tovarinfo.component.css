@@ -1,0 +1,141 @@
+.glavb{
+    float: left;
+    margin-top: 94px;
+    margin-left: 40px;
+    width: 60%;
+}
+
+.nametov{
+    margin-bottom: 30px;
+}
+
+.pict{
+    float: left;
+    background-image: url('http://i.stack.imgur.com/Dj7eP.jpg');
+    background-position: top center;
+    width: 300px;
+    height: 300px;
+    /*margin-bottom: 30px;*/
+    border-radius: 10px;
+}
+
+.tbl{
+    float: left;
+    /*margin-left: 75px;*/
+}
+
+.osnopt{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.still{
+    width: 460px;
+    font-size: 17px;
+    border-right: none;
+    border-left: none;
+}
+
+td{
+    padding: 5px;
+}
+
+.glavknop{
+    margin-top: 25px;
+}
+
+.koz{
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-right: 55px;
+    background: white;
+    font-size: 17px;
+    border: 1px solid rgba(45,45,45,0.98);
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+div .glavknop input:last-child{
+   margin-right: 0;
+}
+
+.koz:hover{
+    color: white;
+    background: rgba(45,45,45,0.98);
+    transition: 0.2s;
+}
+
+.dcena{
+    width: 197px;
+    display: flex;
+    justify-content: center;
+}
+
+.cena{
+    font-size: 16px;
+}
+
+.picture{
+    float: left;
+    margin-right: 25px;
+    max-width: 189px;
+    min-width: 291px;
+  }
+
+  .otzv{
+      float: left;
+      margin-top: 50px;
+  }
+
+  .feed{
+      height: 35px;
+      width: 440px;
+      font-size: 17px;
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+      outline: none;
+  }
+
+  .feed:hover{
+      border: 1px solid rgba(45,45,45,0.98);;
+      transition: 0.3s;
+  }
+
+  .otpr{
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: white;
+    font-size: 17px;
+    border: 1px solid rgba(45,45,45,0.98);
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .otp{
+      margin-top: 10px;
+      text-align: right;
+  }
+
+  .otpr:hover{
+    color: white;
+    background: rgba(45,45,45,0.98);
+    transition: 0.2s;
+  }
+
+  .log_shap{
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    color: black;
+  }
+
+  #div_comment{
+    margin-left: 80px;
+    margin-top: 35px;
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }

@@ -1,0 +1,68 @@
+<div *ngIf="PersonalAreai.email == null ">
+  <app-header2></app-header2>
+</div>
+<div *ngIf="PersonalAreai.email != null ">
+  <app-header></app-header>
+</div>
+
+<div *ngFor=" let Catalog of Catalogi" class = "glavb">
+  <div class = "nametov">
+    <h1>{{Catalog.nameModel}}</h1>
+  </div>
+  <div>
+    <img src = "http://68.183.64.66:5000/api/Catalog/Rec?productID={{Catalog.productID}}" class = "picture"/>
+  </div>
+  <div class = "tbl">
+    <table class = "still">
+      <caption class = "osnopt"> Основные характеристики </caption>
+        <tr>
+        <td> {{Catalog.height}} </td>
+        </tr>
+        <tr>
+        <td> {{Catalog.weight}} </td>
+        </tr>
+        <tr>
+        <td> {{Catalog.depth}} </td>
+        </tr>
+        <tr>
+        <td> {{Catalog.colorModel}} </td>
+        </tr>
+        <tr>
+        <td> {{Catalog.volume}} </td>
+        </tr>
+        <tr>
+        <td> {{Catalog.capaci}} </td>
+        </tr>
+        <tr>
+        <td> {{Catalog.freezerVolume}} </td>
+        </tr>
+    </table>
+    <div class = "glavknop">
+      <div class = "dcena">
+      <label class = "cena">{{Catalog.price}} RUB</label>
+      </div>
+      <input type="submit" (click)="getKorzina()"  class = "koz" value = "Добавить в корзину">
+      <input type="submit" routerLink="/catalog" class = "koz" value = "Вернуться к каталогу">
+    </div>
+  </div>
+  <form #FormComment="ngForm" (submit)="getComment(FormComment)">
+      <div class = "otzv">
+        <div>
+          <div>
+          <label for = "fe" style = "margin-right: 10px;"> Отзыв:</label>
+          <input type="text" name="FeedBack" ngModel class = "feed" id = "fe" >
+          </div>
+          <div class = "otp">
+          <input type="submit" value="Отправить" class = 'otpr'>
+          </div>
+        </div>
+        <div id="div_comment" *ngFor=" let Comment of Commenti">
+      <label class="log_shap">{{Comment.login}}
+      {{Comment.data}}</label> <br>
+      <label class="coment">{{Comment.productFeedBack}}</label>
+        </div>
+      </div>
+      </form> 
+  </div>
+
+  
