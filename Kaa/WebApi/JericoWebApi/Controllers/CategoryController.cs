@@ -28,7 +28,16 @@ namespace JericoWebApi.Controllers
 
 
 
-
+        [AllowAnonymous]
+        [Route("Rec")]
+        [HttpGet]
+        public async Task<IActionResult> get(int categoryID)
+        {
+            System.IO.DirectoryInfo directory = new System.IO.DirectoryInfo(@"Image");
+            string path = directory.FullName + "\\";
+            var image = System.IO.File.OpenRead(path + categoryID.ToString() + @".jpg");
+            return File(image, "image/jpeg");
+        }
 
         [Route("Status")]
         [HttpGet]
