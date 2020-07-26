@@ -10,15 +10,20 @@
   <h2 class="Tovar"> Фильтр по услугам </h2>
   <label for="List" class="Lol"> Категория </label> <br>
   <select [(ngModel)]="categorid" id="List" class="Kel" (change)=" getCatalog()">
-    <option  value="{{Categor.id}}" name="nameCategory" *ngFor=" let Categor of Categori">{{Categor.nameCategory}} </option>
+    <option value="{{Categor.id}}" name="nameCategory" *ngFor=" let Categor of Categori">{{Categor.nameCategory}} </option>
   </select>
+
   <div style = "height: 15px;"> </div>
+  <div class="DivCat" *ngFor=" let Categor of Categori">
+    <img class="imgCat" *ngIf="categorid == Categor.id" src="http://localhost:5000/api/Category/Rec?categoryID= {{Categor.id}}">
+    <p class="descriptionCat" *ngIf="categorid == Categor.id">{{Categor.description}}</p>
+
+  </div>
   </div>
   <div id = "holod">
   <div *ngFor=" let Catalog of Catalogi" id = "Block">
     <div style = "margin-bottom: 20px;">
       <div >
-        <img src = "http://localhost:5000/api/Catalog/Rec?productID={{Catalog.productID}}" class = "picture"/>
         <h2 id = "Name">{{Catalog.name}}</h2>
       </div>
       <div>

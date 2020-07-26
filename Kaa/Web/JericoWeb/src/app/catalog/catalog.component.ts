@@ -30,7 +30,6 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit() {
     this.getCategory();
-   // this.getCatalog();
     this.getSbros();
 
     this.PersonalAreai = this.user.GetCurrentUser();
@@ -77,7 +76,7 @@ export class CatalogComponent implements OnInit {
     this.KorzinaModal.open();
  }
 
- getKorzina(id){
+ getKorzina(id) {
   const body = {
      UserID : this.PersonalAreai.id,
      productID : id,
@@ -90,7 +89,7 @@ export class CatalogComponent implements OnInit {
   });
 }
 
-getTovarinfo(id){
+getTovarinfo(id) {
   const body = {
     productID : id,
  };
