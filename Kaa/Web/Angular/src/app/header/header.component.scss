@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+}
+
+header{
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  /*margin-top: 0;*/
+  background: rgba(45,45,45,0.98);
+  /*background: radial-gradient(circle,#0f4260,#001c42);*/
+}
+
+.Menu {
+  /*background: #f5f5f5;*/
+  /*border: 2px solid grey;*/
+  border: none;
+  background: none;
+  color: #fff;
+  padding: 17px;
+  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  border-radius: 44px;
+  margin-right: 11px;
+
+}
+
+@media screen and (max-width: 750px){
+  .Menu{
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+#Svyaz{
+  color: darkslategrey;
+}
+
+.Num{
+  color: grey;
+  margin-right: 14%;
+  margin-top: 18px;
+}
+
+#Jer{
+  text-align: center;
+  position: relative;
+  right: 5px;
+}
+
+.Jeri{
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid red;
+  color: white;
+  position: relative;
+  top: 5px;
+}
+
+.Menu:hover{
+  transition-duration: 0.2s;
+  opacity: .65;
+}
+
+/*.Menu:active{
+    background: lightgrey;
+}*/
+
+.headText{
+  text-align: center;
+}
+
+input:last-child{
+  margin-right: 0;
+}

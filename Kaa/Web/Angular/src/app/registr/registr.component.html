@@ -1,0 +1,27 @@
+
+<div>
+  <app-header></app-header>
+</div>
+
+<body>
+  <div class="AuthorizationDiv" >
+  <form #FormReg="ngForm" (submit)="getRegistr(FormReg)" novalidate>
+    <div class="AuthorizationHead">
+    <h1>Регистрация</h1>
+    </div>
+    <div class="AuthorizationParam">
+      <p for = "Eml" ><span class = "glyphicon glyphicon-envelope" ></span>Email</p>
+      <input type = "email"  name="Mail" ngModel required="required"  >
+    </div>
+    <div class="AuthorizationParam">
+      <p for = "Pass" class = "RegaAvt"><span class = "glyphicon glyphicon-lock" ></span>Пароль</p>
+      <input type = "password"  name="password" ngModel placeholder="минимум 6 символов" required="required" >
+    </div>
+    <div class = "ButtonDiv">
+      <input type = "submit" name="btn_submit_register" value="Зарегистрироваться" class = "Regivxod">
+    </div>
+  </form>
+
+    <div style = "height: 50px;"></div>
+  </div>
+  </body>

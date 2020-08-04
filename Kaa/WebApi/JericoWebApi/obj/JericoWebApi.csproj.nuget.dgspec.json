@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\JericoWebApi.csproj": {}
+    "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\JericoWebApi.csproj": {}
   },
   "projects": {
-    "G:\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj": {
+    "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj",
+        "projectUniqueName": "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj",
         "projectName": "JericoDataBase",
-        "projectPath": "G:\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj",
-        "packagesPath": "C:\\Users\\Никитоз\\.nuget\\packages\\",
-        "outputPath": "G:\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\obj\\",
+        "projectPath": "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj",
+        "packagesPath": "C:\\Users\\vyakubovskiy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Никитоз\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vyakubovskiy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,17 +93,17 @@
         }
       }
     },
-    "G:\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\JericoWebApi.csproj": {
+    "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\JericoWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\JericoWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\JericoWebApi.csproj",
         "projectName": "JericoWebApi",
-        "projectPath": "G:\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\JericoWebApi.csproj",
-        "packagesPath": "C:\\Users\\Никитоз\\.nuget\\packages\\",
-        "outputPath": "G:\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\obj\\",
+        "projectPath": "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\JericoWebApi.csproj",
+        "packagesPath": "C:\\Users\\vyakubovskiy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Никитоз\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vyakubovskiy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -116,8 +116,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "G:\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj": {
-                "projectPath": "G:\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj"
+              "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj": {
+                "projectPath": "C:\\Users\\vyakubovskiy\\Documents\\GitHub\\Magaz2\\Kaa\\WebApi\\JericoDataBase\\JericoDataBase.csproj"
               }
             }
           }

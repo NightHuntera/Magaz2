@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'varibles';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+.Select{
+  position: relative;
+  color: black;
+  height: 30px;
+  width: 100%;
+  option{
+    width: 100%;
+    position: relative;
+  }
+}
+
+
