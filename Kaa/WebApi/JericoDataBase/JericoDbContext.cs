@@ -14,7 +14,7 @@ namespace JericoDataBase
 
     public class JericoDbContext : DbContext
     {
-public DbSet<Basket> Baskets { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
         public DbSet<Catalog> Catalogs { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Model> Models { get; set; }
@@ -85,17 +85,7 @@ public DbSet<Basket> Baskets { get; set; }
                 );
 
             
-            modelBuilder.Entity<Model>().HasData(
-            new Model
-            {
-                ID = 1,
-                NameModel = "Черновая отделка",
-                Description = "Отделка гипсокартоном." +
-                "Это черновой вид отделки, подразумевающий впоследствии чистовую отделку. Используется для лёгкого и быстрого выравнивания стены." +
-                " Работа не сопровождается большими мусорными отходами и грязью. Подходит для любой комнаты в жилом доме."
-
-            }
-            );
+            
             modelBuilder.Entity<PersonalArea>().HasData(
                 new PersonalArea
                 {

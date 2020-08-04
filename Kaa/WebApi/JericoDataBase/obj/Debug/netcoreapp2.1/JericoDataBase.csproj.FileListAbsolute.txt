@@ -44,3 +44,14 @@ C:\Users\vyakubovskiy\Documents\GitHub\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debu
 C:\Users\vyakubovskiy\Documents\GitHub\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.dll
 C:\Users\vyakubovskiy\Documents\GitHub\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.pdb
 C:\Users\vyakubovskiy\Documents\GitHub\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.genruntimeconfig.cache
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\bin\Debug\netcoreapp2.1\JericoDataBase.deps.json
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\bin\Debug\netcoreapp2.1\JericoDataBase.runtimeconfig.json
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\bin\Debug\netcoreapp2.1\JericoDataBase.runtimeconfig.dev.json
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\bin\Debug\netcoreapp2.1\JericoDataBase.dll
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\bin\Debug\netcoreapp2.1\JericoDataBase.pdb
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.csprojAssemblyReference.cache
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.csproj.CoreCompileInputs.cache
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.AssemblyInfoInputs.cache
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.AssemblyInfo.cs
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.dll
+E:\Por\Magaz2\Kaa\WebApi\JericoDataBase\obj\Debug\netcoreapp2.1\JericoDataBase.pdb
