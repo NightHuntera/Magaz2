@@ -2,12 +2,11 @@
 <div>
   <app-header></app-header>
 </div>
-
 <body>
-  <div class="AuthorizationDiv" >
-  <form #FormReg="ngForm" (submit)="getRegistr(FormReg)" novalidate>
+<div class="AuthorizationDiv" >
+  <form #FormReg="ngForm" (submit)="getLoginIn(FormReg)" novalidate>
     <div class="AuthorizationHead">
-    <h1>Регистрация</h1>
+      <h1>Вход</h1>
     </div>
     <div class="AuthorizationParam">
       <p for = "Eml" ><span class = "glyphicon glyphicon-envelope" ></span>Email</p>
@@ -21,9 +20,9 @@
       <input type = "submit" name="btn_submit_register" value="Зарегистрироваться" class = "Regivxod">
     </div>
   </form>
-    <div class="AuthorizationFoot">
-      <a routerLink="/login">Вход в систему</a>
-    </div>
-
+  <div class="AuthorizationFoot">
+    <a routerLink="/registr">Регистрация</a>
   </div>
-  </body>
+
+</div>
+</body>

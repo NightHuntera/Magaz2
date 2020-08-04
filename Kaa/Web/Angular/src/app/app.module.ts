@@ -29,23 +29,37 @@ import {AccessBuhGuard} from "./Guards/AccessBuhGusrd";
 import {AuthGuard} from "./Guards/AuthGuard";
 import { BuhComponent } from './buh/buh.component';
 import {NgxPaginationModule} from "ngx-pagination";
+import {LoginComponent} from "./Login/login.component";
 const appRoutes: Routes = [
 {path: '', component: CatalogComponent},
 {path: 'company', component: CompanyComponent },
 {path: 'catalog', component: CatalogComponent},
 {path: 'contact', component: ContactComponent},
-{path: 'login', component: RegistrComponent},
+{path: 'registr', component: RegistrComponent},
+{path: 'login', component: LoginComponent},
 {path: 'profile', component: LichniyKabComponent, canActivate: [AuthGuard]},
 {path: 'korzina', component: KorzinaComponent, canActivate: [AuthGuard]},
 {path: 'settings', component: UsersettingsComponent, canActivate: [AuthGuard]},
-{path: 'data', component: UserdataComponent, canActivate: [AuthGuard]},
-  {path: 'buh', component: BuhComponent, canActivate: [AccessBuhGuard] },
+{path: 'data', component: UserdataComponent, canActivate: [AuthGuard]}, {path: 'buh', component: BuhComponent, canActivate: [AccessBuhGuard] },
 {path: 'tovarinfo/:id', component: TovarinfoComponent}
 ];
 
 @NgModule({
   declarations: [
-    AppComponent, CompanyComponent, CatalogComponent, ContactComponent, RegistrComponent, HeaderComponent, LichniyKabComponent, KorzinaComponent, Header2Component, UsersettingsComponent, UserdataComponent, TovarinfoComponent, BuhComponent
+    AppComponent,
+    CompanyComponent,
+    CatalogComponent,
+    ContactComponent,
+    RegistrComponent,
+    LoginComponent,
+    HeaderComponent,
+    LichniyKabComponent,
+    KorzinaComponent,
+    Header2Component,
+    UsersettingsComponent,
+    UserdataComponent,
+    TovarinfoComponent,
+    BuhComponent
   ],
     imports: [
         BrowserModule,

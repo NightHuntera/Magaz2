@@ -5,15 +5,16 @@ import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
 
 @Component({
-  selector: 'app-registr',
-  templateUrl: './registr.component.html',
-  styleUrls: ['./registr.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class RegistrComponent implements OnInit {
-  private Registri;
+export class LoginComponent implements OnInit {
+  private LoginIni;
   public login;
   public password;
   public email;
+  public loginin;
   public passwordin;
   PersonalAreai;
 
@@ -22,13 +23,15 @@ export class RegistrComponent implements OnInit {
   // tslint:disable-next-line:typedef
   ngOnInit() {
     this.PersonalAreai = this.user.GetCurrentUser();
+    console.log(this.PersonalAreai);
   }
 
-  // tslint:disable-next-line:typedef
-  getRegistr(Form: NgForm) {
-    this.http.post('Author/register', Form.value).subscribe((data: any) => {
-      this.Registri = data;
-      this.route.navigateByUrl('login');
+// tslint:disable-next-line:typedef
+  getLoginIn(Form: NgForm) {
+    this.http.post('Author/login', Form.value).subscribe((data: any) => {
+      this.LoginIni = data;
+      this.user.SetIdentity(data);
+      this.route.navigateByUrl('/profile');
     });
   }
 }
