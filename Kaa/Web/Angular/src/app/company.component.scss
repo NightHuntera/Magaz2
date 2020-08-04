@@ -1,96 +1,152 @@
+@import "../styles/varibles";
 html{
   height: 100%;
 }
-
 body{
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
 }
-
-#Company{
-  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: black;
-  position: relative;
-}
 .Title{
-  font-size: 72px;
+  font-size: $Standart-size-h1;
   text-align: center;
-}
-
-img{
-  position: relative;
-  width: 27%;
-  text-align: center;
-  height: 400px;
-  max-height: 100%;
-  padding: 2%;
-  border: darkgrey solid 2px;
-  display: block;
-  margin: 1%;
-
-
-
 }
 
 .imgCont{
+  position: relative;
+  width: 100%;
+}
+.imgFlex{
+  padding: 30px;
+  margin-bottom: 20px;
+  height: 100%;
   display: flex;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   flex-direction: row;
+  .DivImg{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: darkgrey solid 2px;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+
+    img{
+      position: relative;
+      width: 100%;
+      text-align: center;
+      height: 400px;
+      max-height: 100%;
+      padding: 2%;
+      display: block;
+      object-fit: cover;
+    }
+    .DescriptionImg{
+      border-radius: 8px;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 20%;
+      margin-top: 10px;
+      background-color: rgba(133, 131, 131, 0.3);
+      text-align: center;
+    }
+  }
+}
+.OCom{
+  font-size: $Standart-size-p;
+  font-famsily: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: black;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.OCom{
-  font-famsily: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 32px;
-  color: black;
-}
 .row{
-  font-size: 25px;
+  font-size: $Standart-size-row;
   background-color: rgba(0,255,0,0.3);
   margin-left: 15px;
+  border-radius: 16px;
+  padding: 0px 10px 0px 10px;
 }
-#Com{
+.Main{
+  position: relative;
   float: left;
   width: 95%;
-  margin-left: 15px;
+  left: 2%;
   margin-top: 94px;
   animation-name: anime;
   animation-duration: 1s;
+  min-width: 400px;
 }
 
-#Zagol{
+.Head{
   border-bottom: 1px solid rgba(45,45,45,0.98);
   margin-bottom: 23px;
   width: 25%;
-}
-
-@media screen and (max-width: 418px){
-  #Com{
-    margin-top: 120px;
+  h2{
+    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: black;
+    position: relative;
   }
 }
+.ContactMain{
+  text-align: center;
+}
+.Map{
+  position: relative;
+  width: 40%;
+  height: 400px;
+  border: 1px solid black;
+}
+.MainComment{
+  position: relative;
+  width: 25%;
+  left: 2%;
+  margin-bottom: 10px;
+  .HeadComment{
+    margin-bottom: 10px;
+    .DivComment{
+      position: relative;
+      background-color: rgba(183, 183, 183, 0.5);
+      width: 100%;
+      border-radius: 16px;
+      padding-left: 10px;
+      margin-top: 1em;
+      .AuthorComment{
 
-@media screen and (max-width: 289px){
-  #Com{
-    margin-top: 196px;
+      }
+      .Comment{
+        font-weight: 300;
+      }
+    }
+
+  }
+
+}
+.DivReport{
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 750px){
+  .imgFlex{
+    flex-direction: column;
+    align-items: center;
+  }
+  .DivImg{
+    margin-top: 20%;
+  }
+  .Title{
+    font-size: $Small-size-h1;
+  }
+  .OCom{
+    font-size: $Small-size-p;
+  }
+  .row{
+    font-size: $Small-size-row;
   }
 }
 
-@media screen and (max-width: 1000px){
-  #Com{
-    margin-top: 154px;
-  }
-}
-
-/*@keyframes anime{
-  from{
-    margin-left: 100%;
-    width: 300%;
-  }
-  to{
-    margin-left: 15px;
-    width: 100%;
-  }
-}*/

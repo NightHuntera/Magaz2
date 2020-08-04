@@ -10,6 +10,7 @@ const USERCOOKIEKEY = 'user';
   providedIn: 'root'
 })
 export class UserService {
+  PagginationArray = [1, 2, 3, 5];
   constructor(
     private cookie: CookieService,
     private dataSeq: HashService,

@@ -3,35 +3,87 @@
   <app-header></app-header>
 </div>
 
-<div id = "Com">
-  <div id = "Zagol">
-  <h1 id = "Company">О нас</h1>
+<div class="Main">
+  <div class="Head">
+  <h2 >О нас</h2>
   </div>
-  <p class = "Title">СЛР+</p>
+  <h1 class = "Title">СЛР+</h1>
   <p class = "OCom">Мы занимаемся отделкой рабочих и жилых помещений, а так же коммуникациями.</p>
-  <div class="imgCont">
-    <img src="/assets/img/2-bY3yIHIa4.jpg">
-    <img src="/assets/img/2-bY3yIHIa4.jpg">
-    <img src="/assets/img/2-bY3yIHIa4.jpg">
 
+  <div class="imgCont">
+  <div class="imgFlex">
+    <div class="DivImg">
+      <img src="/assets/img/2-bY3yIHIa4.jpg">
+      <div class="DescriptionImg">
+        <label>Описание</label>
+      </div>
+    </div>
+    <div class="DivImg">
+      <img src="/assets/img/2-bY3yIHIa4.jpg">
+      <div class="DescriptionImg">
+        <label>Описание</label>
+      </div>
+    </div>
+    <div class="DivImg">
+      <img src="/assets/img/2-bY3yIHIa4.jpg">
+      <div class="DescriptionImg">
+        <label>Описание</label>
+      </div>
+    </div>
+  </div>
   </div>
 
   <p class = "OCom">Мы гарантируем:</p>
   <label><p class="row">100% выполнение заказа</p></label><br>
   <label><p class="row">Высокий уровень качества</p></label><br>
   <label><p class="row">Отсутсвие задержек</p></label>
-  <div id = "Zagol">
-  </div>
-  <p class="OCom"> Отзывы клиентов</p>
-  <div *ngIf="PersonalAreai.id != null">
-    <label>Отзыв</label>
-    <input type="text" [(ngModel)]="Otziv">
-    <button (click)="newOtziv()">Отправиит</button>
-  </div>
-  <div id="div_comment" *ngFor=" let Comment of Commenti">
-    <label class="log_shap">{{Comment.login}}
-      {{Comment.data}}</label> <br>
-    <label class="coment">{{Comment.productFeedBack}}</label>
+
+
+    <p class="OCom">Контакты</p>
+<div class="ContactMain">
+  <div class="Contact" >
+    <p>пр. Красноярский рабочий, 29, Красноярск, 660123</p>
+    <p>Телефон приёмной: +7 (931) 231 96 22</p>
+    <p>Телефон отдела розничных продаж: +7 (391) 272 97 90</p>
+    <p>Телефон отдела оптовых продаж: +7 (391) 231 96 18</p>
+    <p>Факс: +7 (391) 231 96 40</p>
   </div>
 
+
+  <div>
+    <iframe class="Map"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4564654d075cfb94d66ce3e12159a168be9da268c4e03248a259b8bec75a8d50&amp;source=constructor"
+            frameborder="0">
+    </iframe>
+  </div>
+</div>
+
+  <p class="OCom"> Отзывы клиентов</p>
+<div class="MainComment">
+
+
+  <div class="HeadComment" *ngFor=" let Comment of Commenti">
+    <div class="DivComment">
+    <label class="AuthorComment">{{Comment.login}}:
+      {{Comment.data}}</label> <br>
+    <label class="Comment">{{Comment.productFeedBack}}</label>
+    </div>
+  </div>
+  <div>
+    <div class="DivSelect">
+      <div class="DivOption" >
+        <button *ngFor=" let Param of PagginationArray " class="ButtonSelect">{{Param}}</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="PersonalAreai.id != null" class="DivReport">
+    <input multiple type="text" [(ngModel)]="Otziv" placeholder="Отзыв" class="DefaultInputText">
+    <button (click)="newOtziv()" class="DefaultSubmitButton">Отправить</button>
+  </div>
+  <div *ngIf="PersonalAreai.id == null">
+    <label>Для отправки отзыва необходимо авторизоватся</label>
+  </div>
+
+</div>
 </div>

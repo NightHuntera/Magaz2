@@ -13,7 +13,6 @@ import { HashService } from './Service/hash.service';
 import { AppComponent } from './app.component';
 import { CompanyComponent } from './company.component';
 import { CatalogComponent } from './catalog/catalog.component';
-import { ContactComponent } from './contact.component';
 import { RegistrComponent } from './registr/registr.component';
 import { HeaderComponent } from './header/header.component';
 import { LichniyKabComponent } from './lichniy-kab/lichniy-kab.component';
@@ -34,7 +33,6 @@ const appRoutes: Routes = [
 {path: '', component: CatalogComponent},
 {path: 'company', component: CompanyComponent },
 {path: 'catalog', component: CatalogComponent},
-{path: 'contact', component: ContactComponent},
 {path: 'registr', component: RegistrComponent},
 {path: 'login', component: LoginComponent},
 {path: 'profile', component: LichniyKabComponent, canActivate: [AuthGuard]},
@@ -49,7 +47,6 @@ const appRoutes: Routes = [
     AppComponent,
     CompanyComponent,
     CatalogComponent,
-    ContactComponent,
     RegistrComponent,
     LoginComponent,
     HeaderComponent,

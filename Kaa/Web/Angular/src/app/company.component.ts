@@ -14,6 +14,7 @@ export class CompanyComponent implements OnInit {
   PersonalAreai;
   Commenti;
   Otziv = '';
+  PagginationArray = [1, 2, 3, 5];
 
   constructor(private http: HttpService, private route: Router, private user: UserService) {}
 
