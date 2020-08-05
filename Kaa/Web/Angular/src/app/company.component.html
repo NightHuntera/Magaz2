@@ -60,25 +60,20 @@
 
   <p class="OCom"> Отзывы клиентов</p>
 <div class="MainComment">
+  <app-select [ParamArray]="PagginationArray" [ParamTitle]="'Количество отзывов'" (OutputParam)="PageSize=$event"></app-select>
 
-
-  <div class="HeadComment" *ngFor=" let Comment of Commenti">
+  <div class="HeadComment" *ngFor=" let Comment of Commenti | paginate: { itemsPerPage: PageSize, currentPage: Page }">
     <div class="DivComment">
     <label class="AuthorComment">{{Comment.login}}:
       {{Comment.data}}</label> <br>
     <label class="Comment">{{Comment.productFeedBack}}</label>
     </div>
   </div>
-  <div>
-    <div class="DivSelect">
-      <div class="DivOption" >
-        <button *ngFor=" let Param of PagginationArray " class="ButtonSelect">{{Param}}</button>
-      </div>
-    </div>
-  </div>
+  <pagination-controls (pageChange)="Page = $event" previousLabel="" nextLabel=""></pagination-controls>
+
 
   <div *ngIf="PersonalAreai.id != null" class="DivReport">
-    <input multiple type="text" [(ngModel)]="Otziv" placeholder="Отзыв" class="DefaultInputText">
+    <textarea multiple type="text" [(ngModel)]="Otziv" placeholder="Отзыв" class="DefaultInputText"></textarea>
     <button (click)="newOtziv()" class="DefaultSubmitButton">Отправить</button>
   </div>
   <div *ngIf="PersonalAreai.id == null">

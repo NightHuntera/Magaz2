@@ -1,0 +1,29 @@
+@import "./src/styles/varibles";
+
+.Alert{
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: $Border-Radius;
+  background: rgba(255, 0, 0, 0.2);
+  .TextAlert{
+    float: left;
+    left: 10%;
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+  }
+  .CloseAlert{
+    margin-right: 15px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 10px;
+  }
+}

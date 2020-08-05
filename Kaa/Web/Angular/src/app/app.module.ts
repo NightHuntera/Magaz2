@@ -29,6 +29,9 @@ import {AuthGuard} from "./Guards/AuthGuard";
 import { BuhComponent } from './buh/buh.component';
 import {NgxPaginationModule} from "ngx-pagination";
 import {LoginComponent} from "./Login/login.component";
+import { AlertComponent } from './Alert/alert/alert.component';
+import {AlertService} from "./Service/alert.service";
+import { SelectComponent } from './select/select.component';
 const appRoutes: Routes = [
 {path: '', component: CatalogComponent},
 {path: 'company', component: CompanyComponent },
@@ -56,7 +59,9 @@ const appRoutes: Routes = [
     UsersettingsComponent,
     UserdataComponent,
     TovarinfoComponent,
-    BuhComponent
+    BuhComponent,
+    AlertComponent,
+    SelectComponent
   ],
     imports: [
         BrowserModule,
@@ -75,6 +80,7 @@ const appRoutes: Routes = [
     HashService,
     HttpService,
     ScriptService,
+    AlertService,
   ],
 
   bootstrap: [AppComponent]

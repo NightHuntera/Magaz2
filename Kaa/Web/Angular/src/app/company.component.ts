@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpService} from "./Service/http.service";
-import { NgForm} from '@angular/forms';
-import { Router } from '@angular/router';
-import { UserService } from './Service/user.service';
+import {Router} from '@angular/router';
+import {UserService} from './Service/user.service';
+import {AlertService} from './Service/alert.service';
+import {TypeAlert} from "./Enum/AlertEnum";
+import {AlertM} from './Models/AlertM';
 
 @Component({
   selector: 'company-app',
@@ -14,13 +16,14 @@ export class CompanyComponent implements OnInit {
   PersonalAreai;
   Commenti;
   Otziv = '';
-  PagginationArray = [1, 2, 3, 5];
+  PagginationArray = [2, 5, 10, 25];
+  PageSize = 2;
+  Page = 1;
 
-  constructor(private http: HttpService, private route: Router, private user: UserService) {}
+  constructor(private http: HttpService, private route: Router, private user: UserService, private AlertS: AlertService) {}
 
   ngOnInit() {
     this.PersonalAreai = this.user.GetCurrentUser();
-   // console.log(this.PersonalAreai);
     this.getOtziv();
   }
 

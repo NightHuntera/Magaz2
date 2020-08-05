@@ -24,8 +24,8 @@
   margin-bottom: 10px;
 }
 .DefaultSubmitButton{
-
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    outline: none;
+    font-family: $Font;
     background: white;
     font-size: 17px;
     border: 1px solid rgba(45,45,45,0.98);
@@ -34,25 +34,14 @@
     cursor: pointer;
     outline: none;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: $Standart-Margin-Bottom-Top;
     &:hover{
       background: rgba(215, 215, 215, 0.98);
       transition-duration: 0.2s;
     }
 
 }
-.DivOption{
 
-}
-.ButtonSelect{
-  border: rgb(105, 105, 105) solid 1px;
-  border-radius: 8px;
-  position: relative;
-  width: 100%;
-  height: 30px;
-  background-color: lightgray;
-  margin: 5px 0px 5px 0px;
-  &:hover{
-    background-color: darkgray;
-  }
+.ngx-pagination{
+  padding: 0px;
 }
