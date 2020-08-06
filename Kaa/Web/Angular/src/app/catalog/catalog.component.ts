@@ -42,7 +42,6 @@ export class CatalogComponent implements OnInit {
   getCategory() {
     this.http.get('category').subscribe((data: any) => {
       this.Categori = data;
-      console.log(data);
     });
   }
   getCatalog() {
@@ -53,7 +52,6 @@ export class CatalogComponent implements OnInit {
     };
     this.http.post('catalog/Catalog', body).subscribe((data: any) => {
       this.Catalogi = data;
-      console.log(data);
     }, error => {
     });
   }
@@ -65,7 +63,6 @@ export class CatalogComponent implements OnInit {
     };
     this.http.post('catalog/Catalog', body).subscribe((data: any) => {
       this.Catalogi = data;
-      console.log(data);
     });
   }
 
@@ -84,21 +81,18 @@ export class CatalogComponent implements OnInit {
     };
       this.http.post('Basket/BasketAdd', body).subscribe((data: any) => {
         this.Catalogi = data;
-        console.log(data);
-        alert(data);
       });
   }
 
 }
 
-getTovarinfo(id) {
+  getTovarinfo(id) {
   const body = {
     productID : id,
  };
  this.http.post('Model/Model', body).subscribe((data: any) => {
   this.route.navigateByUrl('/tovarinfo/'+id)
    this.Catalogi = data;
-   console.log(data);
  });
 
 }

@@ -11,11 +11,13 @@ export class SelectComponent implements OnInit {
   ChangeParam = false;
   @Input() ParamTitle = '';
   @Input() ParamArray = [];
+  @Input() NameParamDisplay = 'name';
+  @Input() NameParamOutput = 'id';
   @Output() OutputParam = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
-    this.SelectOption = this.ParamArray[0];
+    this.SelectOption = this.ParamArray[0][this.NameParamDisplay];
   }
 
   OpenSelect(){
@@ -34,9 +36,9 @@ export class SelectComponent implements OnInit {
     this.Selected = false;
   }
 
-  ChangeOption(Param){
-    if (this.SelectOption !== Param){
-      this.SelectOption = Param;
+  ChangeOption(Param, Name){
+    if (this.SelectOption !== Name){
+      this.SelectOption = Name;
       this.Selected = false;
       this.ChangeParam = true;
       this.OutputParam.emit(Param);

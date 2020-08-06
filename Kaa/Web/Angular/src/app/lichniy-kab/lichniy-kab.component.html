@@ -2,33 +2,35 @@
   <app-header></app-header>
 </div>
 
-<div id = "GlavBlock">
+<div class="main">
   <div class = "Options">
-      <p> <span class = "glyphicon glyphicon-home" style = "font-size: 18px; margin-right: 15px;"></span> <input type = "submit" value = "Главная" class = "Lich" id = "L"></p>
-      <p> <span class = "glyphicon glyphicon-user" style = "font-size: 18px; margin-right: 15px;"></span> <input type = "submit" routerLink="/data" value = "Личные данные" class = "Lich" id = "I"></p>
-      <p> <span class = "glyphicon glyphicon-cog" style = "font-size: 18px; margin-right: 15px;"></span> <input type = "submit" routerLink="/settings"  value = "Настройки" class = "Lich" id = "C"></p>
+      <p> <span class = "glyphicon glyphicon-home"></span> <input type = "submit" value = "Главная" class = "DefaultSubmitButton"></p>
+      <p> <span class = "glyphicon glyphicon-user"></span> <input type = "submit" routerLink="/data" value = "Личные данные" class = "DefaultSubmitButton"></p>
+      <p> <span class = "glyphicon glyphicon-cog"></span> <input type = "submit" routerLink="/settings"  value = "Настройки" class = "DefaultSubmitButton"></p>
 
     </div>
   <div class = "GlavForm">
-    <div>
-      <img src = "{{scrAV}}" id="Avatar"/>
-    </div>
-    <div id = "NickName">
-        <h1 class = "Nick">{{PersonalAreai.fio}}</h1>
-        <div style = "height: 15px;"></div>
-        <div>
-        <label class = "Name">{{PersonalAreai.email}}</label>
-        </div>
+    <div class="MainAvatar">
+      <div>
+        <img src = "{{scrAV}}" class="Avatar"/>
       </div>
-    <div>
       <form enctype="multipart/form-data" method="post">
-        <div class = "IzmAvt">
-        <label class="custom-file-upload">
-          <input type="file" (change) = "ChangePhoto($event.target.files)" >
+        <div class = "DivChangePhoto">
+        <label class="DefaultSubmitButton">
+          <input type="file" class="" (change) = "ChangePhoto($event.target.files)" >
           Изменить аватар
         </label>
         </div>
         </form>
       </div>
   </div>
+  <div class="MainPersonalAreai">
+    <div class="NickName">
+      <h1 class = "Title">{{PersonalAreai.fio}}</h1>
+      <div>
+        <label class = "Name">{{PersonalAreai.email}}</label>
+      </div>
+    </div>
+  </div>
+
   </div>

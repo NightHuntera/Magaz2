@@ -1,3 +1,3 @@
-export class Option {
-  PaginationArray: [1, 2, 3, 10];
-}
+import {PagginationM} from './PagginationM';
+
+

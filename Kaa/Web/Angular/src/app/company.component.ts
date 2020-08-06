@@ -5,6 +5,7 @@ import {UserService} from './Service/user.service';
 import {AlertService} from './Service/alert.service';
 import {TypeAlert} from "./Enum/AlertEnum";
 import {AlertM} from './Models/AlertM';
+import {PagginationM} from "./Models/PagginationM";
 
 @Component({
   selector: 'company-app',
@@ -16,7 +17,7 @@ export class CompanyComponent implements OnInit {
   PersonalAreai;
   Commenti;
   Otziv = '';
-  PagginationArray = [2, 5, 10, 25];
+  PagginationArray = [new PagginationM(2), new PagginationM(5), new PagginationM(10), new PagginationM(25)];
   PageSize = 2;
   Page = 1;
 

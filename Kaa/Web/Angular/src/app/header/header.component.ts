@@ -7,6 +7,7 @@ import {AlertService} from '../Service/alert.service';
 import {AlertM} from '../Models/AlertM';
 import {catchError} from "rxjs/operators";
 import {throwError} from "rxjs";
+import {CookieService} from "../Service/cookie.service";
 
 
 @Component({
@@ -21,12 +22,6 @@ constructor(private http: HttpService, private route: Router, private user: User
 
   ngOnInit() {
     this.PersonalAreai = this.user.GetCurrentUser();
-    this.http.post('FeedBack/Storage', {}).subscribe(data => {
-
-    }), catchError(err => {
-      console.log(err.code);
-      return throwError(err);
-    });
 
   }
   getVixod(){

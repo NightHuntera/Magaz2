@@ -24,10 +24,11 @@
   margin-bottom: 10px;
 }
 .DefaultSubmitButton{
+  text-align: center;
     outline: none;
     font-family: $Font;
     background: white;
-    font-size: 17px;
+    font-size: 16px;
     border: 1px solid rgba(45,45,45,0.98);
     border-radius: 7px;
     padding: 10px 20px;
@@ -45,3 +46,5 @@
 .ngx-pagination{
   padding: 0px;
 }
+
+

@@ -3,7 +3,7 @@ import {HttpService} from "../Service/http.service";
 import { NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
-import {delay} from "rxjs/operators";
+import {delay} from 'rxjs/operators';
 
 @Component({
   selector: 'app-lichniy-kab',

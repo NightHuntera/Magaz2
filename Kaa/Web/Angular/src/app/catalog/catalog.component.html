@@ -9,12 +9,8 @@
 
 
   <h2 class="Tovar"> Фильтр по услугам </h2>
-  <label for="List" class="Lol"> Категория </label> <br>
-    <input type="button" class="button">
-  <select [(ngModel)]="categorid" id="List" class="Select" (change)=" getCatalog()">
-    <option class="Order" value="{{Categor.id}}" name="nameCategory" *ngFor=" let Categor of Categori">{{Categor.nameCategory}} </option>
-  </select>
-
+    <app-select *ngIf="Categori != undefined" [ParamArray]="Categori" [ParamTitle]="'Категория'"
+                [NameParamDisplay]="'name'" [NameParamOutput]="'id'" (OutputParam)="categorid=$event; getCatalog()"></app-select>
   <div style = "height: 15px;"> </div>
   <div class="DivCat" *ngFor=" let Categor of Categori">
     <img class="imgCat" *ngIf="categorid == Categor.id" src="http://localhost:5000/api/Category/Rec?categoryID= {{Categor.id}}">
