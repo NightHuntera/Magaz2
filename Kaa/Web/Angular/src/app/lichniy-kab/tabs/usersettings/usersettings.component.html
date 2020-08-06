@@ -1,0 +1,31 @@
+
+
+<div class = "MainPersonalArea">
+  <div class="DivPersonalArea">
+    <h1 class = "Title">Изменить данные</h1>
+     <div class="AuthorizationParam">
+         <p class = "data"><label id = "fio">ФИО:</label>
+         <input type="text" [(ngModel)]="FIO" class = "entr"></p>
+     </div>
+     <div class="AuthorizationParam">
+         <p class = "data"><label id = birthday>Дата рождения:</label>
+         <input type="text" [(ngModel)]="DateBirth" class = "entr"></p>
+     </div>
+     <div class="AuthorizationParam">
+         <p class = "data"><label id = "telephone">Телефон:</label>
+         <input type="text" [(ngModel)]="Telefon" class = "entr"></p>
+     </div>
+     <div class="AuthorizationParam">
+         <p class = "data"><label id = "adress">Адрес:</label>
+         <input type="text" [(ngModel)]="Addres" class = "entr"></p>
+     </div>
+     <div class="AuthorizationParam">
+         <p class = "data"><label id = "postcode">Почтовый индекс:</label>
+         <input type="text" [(ngModel)]="Postcode" class = "entr"></p>
+     </div>
+     <div style = "text-align: end;">
+     <input type="button" (click)=" getUpdate()" value="Сохранить" class = "DefaultSubmitButton">
+    </div>
+  </div>
+</div>
+

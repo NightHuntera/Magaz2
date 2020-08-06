@@ -20,23 +20,15 @@
   </div>
 </div>
   <div class = "Orders">
-  <div *ngFor=" let Catalog of Catalogi" id = "Block">
-    <div style = "margin-bottom: 20px;">
+  <div *ngFor=" let Catalog of Catalogi" class="Order">
+
       <div >
         <h2 class = "OrderName">{{Catalog.name}}</h2>
       </div>
-      <div>
+
         <label class = "OrderParam"><span class = "opt">{{Catalog.colorModel}}</span></label><br>
         <label class = "OrderParam"><span class = "opt">{{Catalog.description}}</span></label><br>
         <label class = "OrderParam"><span class = "opt">{{Catalog.height}}</span></label><br>
-        <label class = "OrderParam"><span class = "opt">{{Catalog.weight}}</span></label><br>
-        <label class = "OrderParam"><span class = "opt">{{Catalog.volume}}</span></label><br>
-        <label class = "OrderParam"><span class = "opt">{{Catalog.depth}}</span></label><br>
-        <label class = "OrderParam"><span class = "opt">{{Catalog.freezerVolume}}</span></label><br>
-        <label class = "OrderParam"><span class = "opt">{{Catalog.refrigeratorCapacity}}</span></label><br>
-        <label class = "OrderParam"><span class = "opt">{{Catalog.typeCompressor}}</span></label><br>
-      </div>
-    </div>
     <div class = "OrderFoot">
       <div class = "OrderBuy">
         <button (click)="getKorzina(Catalog.productID)" class = "Korzina"> Добавить в корзину </button>

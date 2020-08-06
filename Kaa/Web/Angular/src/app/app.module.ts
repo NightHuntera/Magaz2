@@ -20,9 +20,8 @@ import { LichniyKabComponent } from './lichniy-kab/lichniy-kab.component';
 import { HttpService } from './Service/http.service';
 import { ScriptService } from './Service/script.service';
 import { KorzinaComponent } from './korzina/korzina.component';
-import { Header2Component } from './header2/header2.component';
-import { UsersettingsComponent } from './usersettings/usersettings.component';
-import { UserdataComponent } from './userdata/userdata.component';
+import { UsersettingsComponent } from './lichniy-kab/tabs/usersettings/usersettings.component';
+import { UserdataComponent } from './lichniy-kab/tabs/userdata/userdata.component';
 import { TovarinfoComponent } from './tovarinfo/tovarinfo.component';
 import {AccessBuhGuard} from "./Guards/AccessBuhGusrd";
 import {AuthGuard} from "./Guards/AuthGuard";
@@ -32,6 +31,7 @@ import {LoginComponent} from "./Login/login.component";
 import { AlertComponent } from './Alert/alert/alert.component';
 import {AlertService} from "./Service/alert.service";
 import { SelectComponent } from './select/select.component';
+import { AvatarComponent } from './lichniy-kab/tabs/avatar/avatar.component';
 const appRoutes: Routes = [
 {path: '', component: CatalogComponent},
 {path: 'company', component: CompanyComponent },
@@ -55,13 +55,13 @@ const appRoutes: Routes = [
     HeaderComponent,
     LichniyKabComponent,
     KorzinaComponent,
-    Header2Component,
     UsersettingsComponent,
     UserdataComponent,
     TovarinfoComponent,
     BuhComponent,
     AlertComponent,
-    SelectComponent
+    SelectComponent,
+    AvatarComponent
   ],
     imports: [
         BrowserModule,

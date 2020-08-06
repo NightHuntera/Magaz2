@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpService} from "../Service/http.service";
+import {HttpService} from '../Service/http.service';
 import { NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
 import {AlertService} from '../Service/alert.service';
 import {AlertM} from '../Models/AlertM';
-import {catchError} from "rxjs/operators";
-import {throwError} from "rxjs";
-import {CookieService} from "../Service/cookie.service";
+
 
 
 @Component({

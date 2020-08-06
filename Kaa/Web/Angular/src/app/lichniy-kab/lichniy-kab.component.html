@@ -4,33 +4,15 @@
 
 <div class="main">
   <div class = "Options">
-      <p> <span class = "glyphicon glyphicon-home"></span> <input type = "submit" value = "Главная" class = "DefaultSubmitButton"></p>
-      <p> <span class = "glyphicon glyphicon-user"></span> <input type = "submit" routerLink="/data" value = "Личные данные" class = "DefaultSubmitButton"></p>
-      <p> <span class = "glyphicon glyphicon-cog"></span> <input type = "submit" routerLink="/settings"  value = "Настройки" class = "DefaultSubmitButton"></p>
+      <p> <span class = "glyphicon glyphicon-home"></span> <input type = "submit"
+                value = "Главная" class = "DefaultSubmitButton" (click)="ChangePage('Avatar')"></p>
+      <p> <span class = "glyphicon glyphicon-user"></span> <input type = "submit"
+                value = "Личные данные" class = "DefaultSubmitButton" (click)="ChangePage('PersonalArea')"></p>
+      <p> <span class = "glyphicon glyphicon-cog"></span> <input type = "submit"
+                value = "Настройки" class = "DefaultSubmitButton" (click)="ChangePage('Setting')"></p>
 
     </div>
-  <div class = "GlavForm">
-    <div class="MainAvatar">
-      <div>
-        <img src = "{{scrAV}}" class="Avatar"/>
-      </div>
-      <form enctype="multipart/form-data" method="post">
-        <div class = "DivChangePhoto">
-        <label class="DefaultSubmitButton">
-          <input type="file" class="" (change) = "ChangePhoto($event.target.files)" >
-          Изменить аватар
-        </label>
-        </div>
-        </form>
-      </div>
-  </div>
-  <div class="MainPersonalAreai">
-    <div class="NickName">
-      <h1 class = "Title">{{PersonalAreai.fio}}</h1>
-      <div>
-        <label class = "Name">{{PersonalAreai.email}}</label>
-      </div>
-    </div>
-  </div>
-
-  </div>
+    <app-avatar *ngIf="Tab === 'Avatar'" class="InfoBlock"></app-avatar>
+  <app-userdata *ngIf="Tab === 'PersonalArea'" class="InfoBlock"></app-userdata>
+  <app-usersettings *ngIf="Tab === 'Setting'" class="InfoBlock"></app-usersettings>
+</div>

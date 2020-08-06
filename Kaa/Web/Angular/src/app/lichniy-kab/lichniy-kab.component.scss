@@ -18,111 +18,11 @@
 }
 
 
-.Lich{
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    background: white;
-    border: 1px solid rgba(45,45,45,0.98);
-    border-radius: 7px;
-    margin-right: 70px;
-    outline: none;
-}
 
-
-.Lich:hover{
-    background: rgba(45,45,45,0.98);
-    color: white;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-
-
-.GlavForm{
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  float: left;
-  margin-left: $Big-Margin-Left-Right;
-  width: 30%;
-  .MainAvatar{
-    max-width: 200px;
-    position: relative;
-    width: 100%;
-
-    .Avatar {
-      float: left;
-      margin-bottom: 19px;
-      width: 100%;
-      max-width: 200px;
-      height: 125px;
-      background-size: cover;
-      background-position: top center;
-      border-radius: 50%;
-    }
-    .DivChangePhoto{
-      text-align: center;
-      position: relative;
-      width: 100%;
-    }
-  }
-  .NickName{
-    position: relative;
-    width: 55%;
-  }
-}
-
-.MainPersonalAreai{
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  float: left;
-  margin-left: $Big-Margin-Left-Right;
-  width: 30%;
-}
-
-.Nick{
-    margin: 0;
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-
-.Name{
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-
-input[type="file"] {
-    display: none;
-}
-
-.custom-file-upload {
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.custom-file-upload:hover{
-    border: 1px solid rgba(45,45,45,0.98);
-    transition: 0.3s;
-}
-
-.IzmAvt{
-    float: left;
-    clear: both;
-}
-
-.Title{
-  margin-top: 0;
-}
 @media screen and (max-width: 750px) {
   .Avatar{
-
     width: 75px;
     height: 75px;
-
   }
   .main{
     display: flex;
@@ -132,7 +32,14 @@ input[type="file"] {
     .Options{
       border: none;
       padding: 0;
+      border-top: 1px solid black;
+      padding-top: $Standart-Margin-Bottom-Top;
     }
+  }
+  .InfoBlock{
+    position: relative;
+    width: 30%;
+    margin-left: 15px;
   }
 }
 

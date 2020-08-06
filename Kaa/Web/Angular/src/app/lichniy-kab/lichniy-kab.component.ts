@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {HttpService} from "../Service/http.service";
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import {HttpService} from '../Service/http.service';
 import { NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
@@ -12,16 +12,12 @@ import {delay} from 'rxjs/operators';
 })
 export class LichniyKabComponent implements OnInit {
    PersonalAreai;
-   selectedFile: File;
-   Catalogi;
-   scrAV = '';
+   Tab = 'PersonalArea';
 
    constructor(private http: HttpService, private user: UserService) {}
-
-  ngOnInit(  ) {
+  ngOnInit() {
 
     this.PersonalAreai = this.user.GetCurrentUser();
-    this.scrAV = this.http.api + 'Author/Rec?UserID=' + this.PersonalAreai.id;
   }
 
   getPersonalAr() {
@@ -30,13 +26,8 @@ export class LichniyKabComponent implements OnInit {
     });
   }
 
-  ChangePhoto(event) {
-        if (event.length > 0) {
-      this.http.makeFileRequest('Author/UploadFiles', event).then( data => {
-        location.reload();
-      });
-
-    }
+  ChangePage(Page){
+     this.Tab = Page;
   }
 
 }
