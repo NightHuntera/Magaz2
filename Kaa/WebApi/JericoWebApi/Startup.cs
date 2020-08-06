@@ -16,7 +16,10 @@ using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Web;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.CookiePolicy;
+
 
 namespace JericoWebApi
 {
@@ -32,15 +35,23 @@ namespace JericoWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             var key = Encoding.ASCII.GetBytes("Как");
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie("Cookies");
-            
+                
+                .AddCookie(options => //CookieAuthenticationOptions
+                {
+                    options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                    
+                });                
+                
+            //cookie.Expires = DateTime.Now.AddYears(1);
 
-            
-                // получаем строку подключения из файла конфигурации
-                string connection = Configuration.GetConnectionString("DefaultConnection");
+
+            // получаем строку подключения из файла конфигурации
+            string connection = Configuration.GetConnectionString("DefaultConnection");
                 // добавляем контекст MobileContext в качестве сервиса в приложение
                 services.AddDbContext<JericoDbContext>(options => options.UseSqlServer(connection));
                 services.AddMvc();
@@ -73,6 +84,7 @@ namespace JericoWebApi
                 app.UseHsts();
             }
             app.UseAuthentication();
+            
             app.UseCors("CorsPolicy");            
             app.UseMvc();
         }

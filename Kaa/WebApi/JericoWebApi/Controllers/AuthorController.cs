@@ -28,7 +28,8 @@ namespace JericoWebApi.Controllers
     public class AuthorController : Controller
     {
         private JericoDbContext dbContext;
-        
+
+
         public AuthorController(JericoDbContext context)
         {
             dbContext = context;
@@ -215,10 +216,10 @@ namespace JericoWebApi.Controllers
             var  identity = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
             var authProperties = new AuthenticationProperties
             {
-                //AllowRefresh = <bool>,
+                //AllowRefresh = true,
                 // Refreshing the authentication session should be allowed.
 
-                //ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
+                // ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(5),
                 // The time at which the authentication ticket expires. A 
                 // value set here overrides the ExpireTimeSpan option of 
                 // CookieAuthenticationOptions set with AddCookie.
