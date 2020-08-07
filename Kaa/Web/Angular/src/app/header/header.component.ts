@@ -20,6 +20,9 @@ constructor(private http: HttpService, private route: Router, private user: User
 
   ngOnInit() {
     this.PersonalAreai = this.user.GetCurrentUser();
+    if (this.PersonalAreai.id === null) {
+      this.getVixod();
+    }
 
   }
   getVixod(){

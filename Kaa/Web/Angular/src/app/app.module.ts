@@ -5,7 +5,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {BsModalModule} from 'ng2-bs3-modal';
 
 
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserService } from './Service/user.service';
 import { CookieService } from './Service/cookie.service';
 import { HashService } from './Service/hash.service';
@@ -32,16 +32,15 @@ import { AlertComponent } from './Alert/alert/alert.component';
 import {AlertService} from "./Service/alert.service";
 import { SelectComponent } from './select/select.component';
 import { AvatarComponent } from './lichniy-kab/tabs/avatar/avatar.component';
+import { ModalComponent } from './modal/modal.component';
 const appRoutes: Routes = [
 {path: '', component: CatalogComponent},
 {path: 'company', component: CompanyComponent },
 {path: 'catalog', component: CatalogComponent},
 {path: 'registr', component: RegistrComponent},
 {path: 'login', component: LoginComponent},
-{path: 'profile', component: LichniyKabComponent, canActivate: [AuthGuard]},
+{path: 'profile/:tab', component: LichniyKabComponent, canActivate: [AuthGuard]},
 {path: 'korzina', component: KorzinaComponent, canActivate: [AuthGuard]},
-{path: 'settings', component: UsersettingsComponent, canActivate: [AuthGuard]},
-{path: 'data', component: UserdataComponent, canActivate: [AuthGuard]}, {path: 'buh', component: BuhComponent, canActivate: [AccessBuhGuard] },
 {path: 'tovarinfo/:id', component: TovarinfoComponent}
 ];
 
@@ -61,15 +60,17 @@ const appRoutes: Routes = [
     BuhComponent,
     AlertComponent,
     SelectComponent,
-    AvatarComponent
+    AvatarComponent,
+    ModalComponent
   ],
     imports: [
         BrowserModule,
-      RouterModule.forRoot(appRoutes),
-      HttpClientModule,
-      FormsModule,
-      BsModalModule,
-      NgxPaginationModule,
+        RouterModule.forRoot(appRoutes),
+        HttpClientModule,
+        FormsModule,
+        BsModalModule,
+        NgxPaginationModule,
+        ReactiveFormsModule,
     ],
 
   providers: [

@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import {HttpService} from '../Service/http.service';
 import { NgForm} from '@angular/forms';
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { UserService } from '../Service/user.service';
 import {delay} from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-lichniy-kab',
@@ -13,10 +14,17 @@ import {delay} from 'rxjs/operators';
 export class LichniyKabComponent implements OnInit {
    PersonalAreai;
    Tab = 'PersonalArea';
+  private subscription: Subscription;
 
-   constructor(private http: HttpService, private user: UserService) {}
+   constructor(
+     private http: HttpService,
+     private user: UserService,
+     private activateRoute: ActivatedRoute,
+     private route: Router
+   ) {
+     this.Tab = activateRoute.snapshot.params['tab'];
+   }
   ngOnInit() {
-
     this.PersonalAreai = this.user.GetCurrentUser();
   }
 
@@ -27,7 +35,10 @@ export class LichniyKabComponent implements OnInit {
   }
 
   ChangePage(Page){
+     this.route.navigateByUrl('profile/' + Page);
      this.Tab = Page;
   }
 
+  ChangeAvatar(){
+  }
 }

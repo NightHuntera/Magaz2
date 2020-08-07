@@ -12,7 +12,7 @@
                 value = "Настройки" class = "DefaultSubmitButton" (click)="ChangePage('Setting')"></p>
 
     </div>
-    <app-avatar *ngIf="Tab === 'Avatar'" class="InfoBlock"></app-avatar>
+    <app-avatar *ngIf="Tab === 'Avatar'" class="InfoBlock" (Reload)="ChangeAvatar()"></app-avatar>
   <app-userdata *ngIf="Tab === 'PersonalArea'" class="InfoBlock"></app-userdata>
   <app-usersettings *ngIf="Tab === 'Setting'" class="InfoBlock"></app-usersettings>
 </div>

@@ -3,6 +3,8 @@ import {HttpService} from '../../../Service/http.service';
 import { NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../../Service/user.service';
+import {TypeAlert} from "../../../Enum/AlertEnum";
+import {AlertService} from "../../../Service/alert.service";
 
 @Component({
   selector: 'app-usersettings',
@@ -18,7 +20,12 @@ export class UsersettingsComponent implements OnInit {
   public Addres;
   public Postcode;
 
-  constructor(private http: HttpService, private route:Router, private user:UserService) {}
+  constructor(
+    private http: HttpService,
+    private route: Router,
+    private user: UserService,
+    private AlertS: AlertService
+  ) {}
 
   ngOnInit() {
     this.PersonalAreai = this.user.GetCurrentUser();
@@ -36,6 +43,7 @@ export class UsersettingsComponent implements OnInit {
 
     this.http.post('Author/update', body).subscribe((data: any) => {
       this.Updati = data;
+      this.AlertS.VisibleAlert('Данные успешно изменены', TypeAlert.Success);
       this.user.SetIdentity(data);
       this.PersonalAreai = data;
     });

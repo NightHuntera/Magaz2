@@ -14,5 +14,6 @@ export class AlertComponent implements OnInit {
   }
 
   CloseAlert(){
+    this.Alert.HiddenAlert();
   }
 }

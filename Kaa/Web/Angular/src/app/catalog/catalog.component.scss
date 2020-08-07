@@ -12,7 +12,7 @@ header{
   position: fixed;
   float: left;
   left: 2%;
-  top: 100px;
+  top: $Max-margin-head;
   width: 25%;
   h1{
     border-bottom: 1px solid rgba(45,45,45,0.98);
@@ -34,24 +34,13 @@ header{
   float: right;
   width: 65%;
   margin-right: 2%;
-  margin-top: 100px;
+  margin-top: $Max-margin-head;
+
 }
 
 .OrderFoot{
   float: right;
   margin-bottom: 20px;
-}
-
-
-.Korzina{
-  font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  border: 1px solid rgba(45,45,45,0.98);
-  border-radius: 7px;
-  padding: 10px;
-  background: white;
-  cursor: pointer;
-  outline: none;
 }
 
 .OrderName{

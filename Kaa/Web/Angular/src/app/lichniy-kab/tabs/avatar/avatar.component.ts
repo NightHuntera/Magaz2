@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {HttpService} from '../../../Service/http.service';
 import {UserService} from '../../../Service/user.service';
+import {AlertService} from '../../../Service/alert.service';
+import {TypeAlert} from '../../../Enum/AlertEnum';
 
 @Component({
   selector: 'app-avatar',
@@ -11,10 +13,13 @@ export class AvatarComponent implements OnInit {
 
   PersonalAreai;
   selectedFile: File;
-  Catalogi;
   scrAV = '';
-
-  constructor(private http: HttpService, private user: UserService) { }
+  @Output() Reload = new EventEmitter();
+  constructor(
+    private http: HttpService,
+    private user: UserService,
+    private AlertS: AlertService
+  ) { }
 
   ngOnInit(): void {
     this.PersonalAreai = this.user.GetCurrentUser();
@@ -24,7 +29,8 @@ export class AvatarComponent implements OnInit {
   ChangePhoto(event) {
     if (event.length > 0) {
       this.http.makeFileRequest('Author/UploadFiles', event).then( data => {
-        location.reload();
+        this.AlertS.VisibleAlert('Аватар успешно изменен', TypeAlert.Success);
+        this.Reload.emit();
       });
 
     }
