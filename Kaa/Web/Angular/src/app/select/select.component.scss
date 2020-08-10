@@ -2,29 +2,39 @@
 
 .MainSelect{
   cursor: pointer;
-}
+  height: auto;
+  .DivSelect{
+    z-index: 2;
+      .Select{
+      position: relative;
+      width: 100%;
+      height: auto;
+      border: darkgray solid 1px;
+      margin-bottom: $Standart-Margin-Bottom-Top;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .LabelSelect{
+        cursor: pointer;
+        position: relative;
+        width: 80%;
+        margin-left: $Standart-Margin-Left-Right;
+        font-weight: 300;
+      }
 
-.DivSelect{
-  z-index: 2;
-  position: relative;
-  width: 100%;
-  height: 30px;
-  border: darkgray solid 1px;
-  padding-top: 3px;
-  margin-bottom: $Standart-Margin-Bottom-Top;
+      .ButtonSelect{
+        text-align: center;
+        border: none;
+        position: relative;
+        display: block;
+        height: 1%;
+        background: none;
+        margin-bottom: $Small-Margin-Bottom-Top;
+        float: right;
+        outline: none;
+      }
 
-  .SpanSelect{
-    margin-left: $Standart-Margin-Left-Right;
-  }
-
-  .ButtonSelect{
-    border: none;
-    position: relative;
-    display: inline-block;
-    background: none;
-    margin-bottom: $Small-Margin-Bottom-Top;
-    float: right;
-    outline: none;
+    }
   }
   .DivOption{
     max-height: 250px;
@@ -34,12 +44,11 @@
     width: 100%;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-
     .ButtonOption{
       border: none;
       position: relative;
       width: 100%;
-      height: 22px;
+      height: auto;
       outline: none;
       background-color: rgba(255, 255, 255, 1);
       &:hover{
@@ -47,6 +56,12 @@
       }
     }
   }
-
-
 }
+@media screen and (max-width: 750px) {
+ .LabelSelect, .ButtonSelect, .ButtonOption{
+   font-size: 10px;
+
+ }
+}
+
+

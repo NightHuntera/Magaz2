@@ -1,0 +1,11 @@
+@import 'varibles';
+
+@media screen and (max-width: 750px) {
+  .DefaultSubmitButton {
+    font-size: 10px;
+
+  }
+  .Title{
+    font-size: $Small-size-h1;
+  }
+}

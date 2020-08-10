@@ -50,7 +50,7 @@ body{
       display: inline-block;
       width: 100%;
       height: 20%;
-      margin-top: 10px;
+      margin-top: $Standart-Margin-Bottom-Top;
       background-color: rgba(133, 131, 131, 0.3);
       text-align: center;
     }
@@ -58,10 +58,10 @@ body{
 }
 .OCom{
   font-size: $Standart-size-p;
-  font-famsily: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-famsily: $Font;
   color: black;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: $Standart-Margin-Bottom-Top;
+  margin-bottom: $Standart-Margin-Bottom-Top;
 }
 
 .row{
@@ -69,17 +69,17 @@ body{
   background-color: rgba(0,255,0,0.3);
   margin-left: 15px;
   border-radius: 16px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px $Standart-Margin-Bottom-Top 0px $Standart-Margin-Bottom-Top;
 }
 .Main{
   position: relative;
   float: left;
   width: 95%;
   left: 2%;
-  margin-top: 94px;
+  margin-top: $Max-margin-head;
   animation-name: anime;
   animation-duration: 1s;
-  min-width: 400px;
+  min-width: $Min-wight-page;
 }
 
 .Head{
@@ -104,16 +104,16 @@ body{
 }
 .MainComment{
   position: relative;
-  width: 25%;
+  width: 35%;
   left: 2%;
   margin-bottom: 10px;
   .HeadComment{
-    margin-bottom: 10px;
+    margin-bottom: $Standart-Margin-Bottom-Top;
     .DivComment{
       position: relative;
       background-color: rgba(183, 183, 183, 0.5);
       width: 100%;
-      border-radius: 16px;
+      border-radius: $Border-Radius;
       padding-left: 10px;
       margin-top: 1em;
       .AuthorComment{
@@ -139,9 +139,6 @@ body{
   .DivImg{
     margin-top: 20%;
   }
-  .Title{
-    font-size: $Small-size-h1;
-  }
   .OCom{
     font-size: $Small-size-p;
   }
@@ -149,4 +146,6 @@ body{
     font-size: $Small-size-row;
   }
 }
+
+@import 'src/styles/Verstka';
 

@@ -1,0 +1,47 @@
+@import 'src/styles/varibles';
+
+.MainPersonalArea{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  float: left;
+  margin-left: $Big-Margin-Left-Right;
+  width: 65%;
+  height: 20%;
+
+  .DivPersonalArea{
+    text-align: center;
+    position: relative;
+    float: right;
+    margin-left: $Big-Margin-Left-Right;
+    width: 70%;
+    .NickName{
+      display: inline;
+      position: relative;
+      width: 55%;
+    }
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .Title{
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .MainPersonalArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    .DivPersonalArea{
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+@import 'src/styles/Verstka';

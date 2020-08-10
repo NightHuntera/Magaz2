@@ -1,0 +1,71 @@
+@import 'src/styles/varibles';
+
+.MainPersonalAreai{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  float: left;
+  margin-left: $Big-Margin-Left-Right;
+  width: 65%;
+
+  .MainAvatar{
+    max-width: 200px;
+    position: relative;
+    width: 100%;
+    float: left;
+
+    .Avatar {
+      float: left;
+      margin-bottom: 19px;
+      width: 100%;
+      max-width: 200px;
+      height: 125px;
+      background-size: cover;
+      background-position: top center;
+      border-radius: 50%;
+    }
+    .DivChangePhoto{
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+  }
+  .DivPersonalAreai{
+    text-align: center;
+    position: relative;
+    float: right;
+    margin-left: $Big-Margin-Left-Right;
+    width: 70%;
+    .NickName{
+      display: inline;
+      position: relative;
+      width: 55%;
+    }
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .Title{
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Avatar{
+    width: 75px;
+    height: 75px;
+  }
+  .MainPersonalAreai{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    .DivPersonalAreai{
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+@import 'src/styles/Verstka';

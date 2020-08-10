@@ -1,10 +1,15 @@
-<label>{{ParamTitle}}</label>
+<label class="LabelSelect">{{ParamTitle}}</label>
 <div class="MainSelect" (mouseleave)="FocusOut()" (click)="OpenSelect()">
-  <div class="DivSelect"><span class="SpanSelect">{{SelectOption}}</span>
-    <button *ngIf="Selected === false" class="ButtonSelect" > + </button>
-    <button *ngIf="Selected === true" class="ButtonSelect" > - </button>
-    <div class="DivOption" *ngIf="Selected === true"  >
-      <button  *ngFor=" let Param of ParamArray " class="ButtonOption" (click)="ChangeOption(Param)">{{Param}}</button>
+  <div class="DivSelect">
+    <div class="Select"><label class="LabelSelect">{{SelectOption}}</label>
+
+      <button *ngIf="Selected === false" class="ButtonSelect" > + </button>
+      <button *ngIf="Selected === true" class="ButtonSelect" > - </button>
     </div>
   </div>
-</div>
+    <div class="DivOption" *ngIf="Selected === true"  >
+      <button  *ngFor=" let Param of ParamArray " class="ButtonOption"
+               (click)="ChangeOption(Param[NameParamOutput], Param[NameParamDisplay])">{{Param[NameParamDisplay]}}</button>
+    </div>
+  </div>
+

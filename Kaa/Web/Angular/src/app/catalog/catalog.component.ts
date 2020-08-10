@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {HttpService} from "../Service/http.service";
+import {HttpService} from '../Service/http.service';
 import { NgForm} from '@angular/forms';
 import {BsModalComponent} from 'ng2-bs3-modal';
 import { UserService } from '../Service/user.service';
@@ -25,7 +25,7 @@ export class CatalogComponent implements OnInit {
   Korzini;
   public catalog;
 
-  constructor(private http: HttpService, private route:Router, private user:UserService) {}
+  constructor(private http: HttpService, private route: Router, private user: UserService) {}
 
   ngOnInit() {
     this.getCategory();
@@ -42,7 +42,6 @@ export class CatalogComponent implements OnInit {
   getCategory() {
     this.http.get('category').subscribe((data: any) => {
       this.Categori = data;
-      console.log(data);
     });
   }
   getCatalog() {
@@ -53,10 +52,10 @@ export class CatalogComponent implements OnInit {
     };
     this.http.post('catalog/Catalog', body).subscribe((data: any) => {
       this.Catalogi = data;
-      console.log(data);
     }, error => {
     });
   }
+
   getSbros() {
     const body = {
       ' CategoryId ': this.categorid,
@@ -65,13 +64,8 @@ export class CatalogComponent implements OnInit {
     };
     this.http.post('catalog/Catalog', body).subscribe((data: any) => {
       this.Catalogi = data;
-      console.log(data);
     });
   }
-
-  OpenKorzinaModal() {
-    this.KorzinaModal.open();
- }
 
  getKorzina(id) {
     if (this.PersonalAreai.id === undefined || this.PersonalAreai.id === 0) {
@@ -84,21 +78,18 @@ export class CatalogComponent implements OnInit {
     };
       this.http.post('Basket/BasketAdd', body).subscribe((data: any) => {
         this.Catalogi = data;
-        console.log(data);
-        alert(data);
       });
   }
 
 }
 
-getTovarinfo(id) {
+  getTovarinfo(id) {
   const body = {
     productID : id,
  };
- this.http.post('Model/Model', body).subscribe((data: any) => {
-  this.route.navigateByUrl('/tovarinfo/'+id)
-   this.Catalogi = data;
-   console.log(data);
+  this.http.post('Model/Model', body).subscribe((data: any) => {
+  this.route.navigateByUrl('/tovarinfo/' + id);
+  this.Catalogi = data;
  });
 
 }

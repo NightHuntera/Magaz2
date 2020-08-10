@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpService} from "../Service/http.service";
+import {HttpService} from "../../../Service/http.service";
 import { NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../Service/user.service';
+import { UserService } from '../../../Service/user.service';
 
 @Component({
   selector: 'app-userdata',

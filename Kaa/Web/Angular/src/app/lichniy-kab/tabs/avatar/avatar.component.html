@@ -1,0 +1,24 @@
+<div class = "MainPersonalAreai">
+  <div class="MainAvatar">
+    <div>
+      <img src = "{{scrAV}}" class="Avatar"/>
+    </div>
+    <form enctype="multipart/form-data" method="post">
+      <div class = "DivChangePhoto">
+        <label class="DefaultSubmitButton">
+          <input type="file" class="" (change) = "ChangePhoto($event.target.files)" >
+          Изменить аватар
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <div class="DivPersonalAreai">
+    <div class="NickName">
+      <h1 class = "Title">{{PersonalAreai.fio}}</h1>
+      <div>
+        <label class = "Name">{{PersonalAreai.email}}</label>
+      </div>
+    </div>
+  </div>
+</div>

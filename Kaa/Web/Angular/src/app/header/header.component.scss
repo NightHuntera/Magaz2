@@ -5,7 +5,7 @@ body{
 }
 
 header{
-  z-index: 2;
+  z-index: 10;
   position: fixed;
   display: inline-block;
   width: 100%;
@@ -21,7 +21,7 @@ header{
   border: none;
   background: none;
   color: #fff;
-  padding: 17px;
+  padding: 15px 12px 15px 12px;
   font-family: $Font;
   font-weight: 100;
   letter-spacing: 1px;

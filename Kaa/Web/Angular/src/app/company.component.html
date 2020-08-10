@@ -60,7 +60,8 @@
 
   <p class="OCom"> Отзывы клиентов</p>
 <div class="MainComment">
-  <app-select [ParamArray]="PagginationArray" [ParamTitle]="'Количество отзывов'" (OutputParam)="PageSize=$event"></app-select>
+  <app-select [ParamArray]="PagginationArray" [ParamTitle]="'Количество отзывов'" [NameParamDisplay]="'Count'"
+              [NameParamOutput]="'Count'" (OutputParam)="PageSize=$event"></app-select>
 
   <div class="HeadComment" *ngFor=" let Comment of Commenti | paginate: { itemsPerPage: PageSize, currentPage: Page }">
     <div class="DivComment">

@@ -1,98 +1,46 @@
-.Options{
+@import 'src/styles/varibles';
+
+.main{
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-top: $Max-margin-head;
+  min-width: $Min-wight-page;
+  .Options{
+    position: relative;
+    max-width: 200px;
+    width: 30%;
     float: left;
-    margin-left: 15px;
+    margin-left: $Big-Margin-Left-Right;
+    padding-right: $Big-Margin-Left-Right;
     border-right: 1px solid black;
+  }
 }
 
-.Lich{
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    background: white;
-    border: 1px solid rgba(45,45,45,0.98);
-    border-radius: 7px;
-    margin-right: 70px;
-    outline: none;
-}
 
-#L{
-    padding: 10px 80px 10px 10px;
-}
 
-#I{
-    padding: 10px 19.6px 10px 10px;
-}
-
-#C{
-    padding: 10px 61.37px 10px 10px;
-}
-
-.Lich:hover{
-    background: rgba(45,45,45,0.98);
-    color: white;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-#Avatar{
-    float: left;
-    margin-bottom: 19px;
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    background-position: top center;
-    border-radius: 50%;
-}
-
-.GlavForm{
-    float: right;
-    margin-left: 62px;
-    width: 496px;
-}
-
-#GlavBlock{
-    float: left;
-    margin-top: 94px;
-}
-
-#NickName{
-    float: right;
-}
-
-@media screen and (max-width: 1000px){
-    #GlavBlock{
-      margin-top: 154px;
+@media screen and (max-width: 750px) {
+  .Avatar{
+    width: 75px;
+    height: 75px;
+  }
+  .main{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+    .Options{
+      border: none;
+      padding: 0;
+      border-top: 1px solid black;
+      padding-top: $Standart-Margin-Bottom-Top;
     }
   }
-
-.Nick{
-    margin: 0;
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  .InfoBlock{
+    position: relative;
+    width: 30%;
+    margin-left: 15px;
   }
-
-.Name{
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-
-input[type="file"] {
-    display: none;
 }
 
-.custom-file-upload {
-    font-family: SF Pro Text, Myriad Set Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.custom-file-upload:hover{
-    border: 1px solid rgba(45,45,45,0.98);
-    transition: 0.3s;
-}
-
-.IzmAvt{
-    float: left;
-    clear: both;
-}
+@import 'src/styles/Verstka';

@@ -2,6 +2,7 @@
 @import 'varibles';
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import "Authorization style";
+@import "ModalS";
 .Select{
   position: relative;
   color: black;
@@ -24,10 +25,11 @@
   margin-bottom: 10px;
 }
 .DefaultSubmitButton{
+  text-align: center;
     outline: none;
     font-family: $Font;
     background: white;
-    font-size: 17px;
+    font-size: 16px;
     border: 1px solid rgba(45,45,45,0.98);
     border-radius: 7px;
     padding: 10px 20px;
@@ -39,9 +41,13 @@
       background: rgba(215, 215, 215, 0.98);
       transition-duration: 0.2s;
     }
-
+    &:disabled{
+      background:rgba(155, 155, 155, 0.98);
+    }
 }
 
 .ngx-pagination{
   padding: 0px;
 }
+
+

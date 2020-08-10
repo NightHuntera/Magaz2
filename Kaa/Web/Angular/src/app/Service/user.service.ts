@@ -5,12 +5,12 @@ import { CookieService } from './cookie.service';
 
 
 const USERCOOKIEKEY = 'user';
+const REQUESTKEY = '.AspNetCore.Cookies';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  PagginationArray = [1, 2, 3, 5];
   constructor(
     private cookie: CookieService,
     private dataSeq: HashService,
@@ -23,6 +23,10 @@ export class UserService {
 
   public UpdateUserInfo(model) {
     this.cookie.setCookie(USERCOOKIEKEY, this.dataSeq.EncodeJSON(model), 10);
+  }
+
+  public GetRequestCookie(){
+    return this.dataSeq.DecodeJSON(this.cookie.getCookie(REQUESTKEY));
   }
 
   public GetCurrentUser() {

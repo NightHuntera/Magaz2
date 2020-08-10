@@ -1,60 +1,60 @@
 
-<div >
-  <app-header></app-header>
+  <app-header ></app-header>
+  <div class="MainModal" [id]="'Modal'">
+    <div class="DivModal">
+      <h2 class="TitleModal">Данные заказа</h2>
+      <form [formGroup]="FormOrder" class="BodyModal">
+      <div class="AuthorizationParam">
+        <p class = "data"><label>ФИО:</label>
+          <input type="text" formControlName="FIO" ></p>
+      </div>
+      <div class="AuthorizationParam">
+        <p class = "data"><label>Телефон:</label>
+          <input type="text"formControlName="Telefon" ></p>
+      </div>
+      <div class="AuthorizationParam">
+        <p class = "data"><label>Адрес:</label>
+          <input type="text" formControlName="Addres" ></p>
+      </div>
+      <div class="AuthorizationParam">
+        <p class = "data"><label>Почтовый индекс:</label></p>
+          <input type="text" formControlName="Postcode">
+      </div>
+      <div class = "gl">
+        <input type="submit" [disabled]="FormOrder.invalid"  (click)="SubmitOrder()" value="Оформить заказ" class = "DefaultSubmitButton">
+        <input type="button" (click)="ModalS.CloseModal('Modal')" value="Закрыть окно" class = "DefaultSubmitButton">
+      </div>
+      </form>
+    </div>
+  </div>
+
+
+
+<div *ngIf="Void ">
+  <label class = "LabelVoid">Ваша корзина пуста</label>
 </div>
+<div *ngIf="!Void">
 
 
-<div *ngIf="Catalogi.length == false ">
-  <label class = "korzpusta">Ваша корзина пуста</label>
-</div>
-<div *ngIf="Catalogi.length != false ">
-
-
-<div *ngFor=" let Catalog of Catalogi" id = "Kor">
+<div *ngFor=" let Catalog of Catalogi" class="MainKorzina">
 <div>
   <img src = "{{http.api}}Catalog/Rec?productID={{Catalog.productID}}" class = "picture"/>
 </div>
-<div class = "Descript" (click)="getTovarinfo(Catalog.productID)">
-    <h2 class = "NaimenT">{{Catalog.nameProduct}}</h2>
-    <h4 class = "KratDesc">Краткое описание</h4>
+<div class = "Description" (click)="getTovarinfo(Catalog.productID)">
+    <h2 class = "NameOrder">{{Catalog.nameProduct}}</h2>
+    <h4 class = "DescriptionOrder">Краткое описание</h4>
 </div>
 <div class = "Price">
 
-    <input type = "submit" (click)="getDeleteKz(Catalog.basketID)" class = "delt" value = "Удалить товар">
+    <input type = "submit" (click)="getDeleteOrder(Catalog.basketID)" class = "DefaultSubmitButton" value = "Удалить товар">
 </div>
 <div class = "navbar-fixed-bottom">
-    <input type = "submit" (click)=" OpenKorzinaModal()" class = "zakaz" value = "Оформить заказ">
+    <input type = "submit" (click)=" ModalS.OpenModal('Modal');" class = "zakaz" value = "Оформить заказ">
 </div>
 </div>
 
 
- <bs-modal #KorzinaModal>
-  <div class="modal-body" id = "Modl">
-    <div id = "GlavData">
-      <div class = "udata">
-        <p class = "data" id = "back"><label class = "changedata">Адрес доставки</label></p> <br>
-        <div style = "float:left; clear:both;">
-        <p class = "data"><label style = "margin-left: 27px;" id = "fio">ФИО:</label>
-        <input type="text" [(ngModel)]="FIO" class = "entr"></p>
-        </div>
-        <div style = "float:left; clear:both;">
-        <p class = "data"><label id = "telephone">Телефон:</label>
-        <input type="text" [(ngModel)]="Telefon" class = "entr"></p>
-        </div>
-        <div>
-        <p class = "data"><label style = "margin-left: 96px;" id = "adress">Адрес:</label>
-        <input type="text" [(ngModel)]="Addres" class = "entr"></p>
-        </div>
-        <div>
-        <p class = "data"><label style = "margin-left: 15px;" id = "postcode">Почтовый индекс:</label>
-        <input type="text" [(ngModel)]="Postcode" class = "entr"></p>
-        </div>
-        <div class = "gl">
-        <input type="button" (click)="this.KorzinaModal.close()" value="Закрыть окно" class = "save">
-        <input type="button" (click)=" getKorzinaa()" value="Оформить заказ" class = "save">
-       </div>
-      </div>
-     </div>
-  </div>
-</bs-modal>
-</div>
+<!-- <bs-modal #KorzinaModal>-->
+
+<!--</bs-modal>-->
+<!--</div>-->
