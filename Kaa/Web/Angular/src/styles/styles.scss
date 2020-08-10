@@ -43,9 +43,20 @@
     }
     &:disabled{
       background:rgba(155, 155, 155, 0.98);
+      &:hover{
+        background:rgba(155, 155, 155, 0.98);
+      }
     }
 }
 
+.WarningInput{
+  margin: 0;
+  color: rgba(195, 16, 16, 0.7);
+  text-align: center;
+  display: block;
+  background-color: rgba(243, 55, 55, 0.3);
+  border-radius:$Border-Radius;
+}
 .ngx-pagination{
   padding: 0px;
 }

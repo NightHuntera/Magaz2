@@ -8,7 +8,8 @@ import {AlertM} from '../Models/AlertM';
 })
 export class AlertService {
 
-  private close = false;
+  private Timer = false;
+  private TimerInterval;
 
   constructor() { }
 
@@ -31,15 +32,20 @@ export class AlertService {
         break;
       }
     }
+    if (this.Timer === true){
+      clearTimeout(this.TimerInterval);
+      this.TimerInterval = setTimeout(this.HiddenAlert,7000);
+    } else {
+      this.Timer = true;
+      this.TimerInterval = setTimeout(this.HiddenAlert,7000);
+    }
 
-    setTimeout(() => {
-      // @ts-ignore
-      document.getElementById('Alert').getElementsByClassName('Alert')[0].style.display = 'none';
-    }, 7000);
   }
 
-  HiddenAlert(){
+  HiddenAlert(): void{
     // @ts-ignore
     document.getElementById('Alert').getElementsByClassName('Alert')[0].style.display = 'none';
+    clearTimeout(this.TimerInterval);
+    this.Timer = false;
   }
 }

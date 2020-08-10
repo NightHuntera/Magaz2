@@ -4,6 +4,8 @@ import { NgForm} from '@angular/forms';
 import {BsModalComponent} from 'ng2-bs3-modal';
 import { UserService } from '../Service/user.service';
 import { Router } from '@angular/router';
+import {AlertService} from '../Service/alert.service';
+import {TypeAlert} from '../Enum/AlertEnum';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -25,14 +27,18 @@ export class CatalogComponent implements OnInit {
   Korzini;
   public catalog;
 
-  constructor(private http: HttpService, private route: Router, private user: UserService) {}
+  constructor(
+    private http: HttpService,
+    private route: Router,
+    private user: UserService,
+    private AlertS: AlertService
+  ) {}
 
   ngOnInit() {
     this.getCategory();
     this.getSbros();
 
     this.PersonalAreai = this.user.GetCurrentUser();
-    console.log(this.PersonalAreai.email != '');
   }
 
   // tslint:disable-next-line:member-ordering
@@ -44,6 +50,7 @@ export class CatalogComponent implements OnInit {
       this.Categori = data;
     });
   }
+
   getCatalog() {
     const body = {
       CategoryId: this.categorid,
@@ -69,7 +76,7 @@ export class CatalogComponent implements OnInit {
 
  getKorzina(id) {
     if (this.PersonalAreai.id === undefined || this.PersonalAreai.id === 0) {
-      alert('Необходимо авторизоватся');
+      this.AlertS.VisibleAlert('Необходимо авторизоватся', TypeAlert.Danger);
     } else {
       const body = {
         UserID : this.PersonalAreai.id,
@@ -78,6 +85,7 @@ export class CatalogComponent implements OnInit {
     };
       this.http.post('Basket/BasketAdd', body).subscribe((data: any) => {
         this.Catalogi = data;
+        this.AlertS.VisibleAlert('Товар добавлен в корзину', TypeAlert.Success);
       });
   }
 

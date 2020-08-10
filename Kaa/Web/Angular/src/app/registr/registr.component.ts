@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from '../Service/http.service';
-import { NgForm} from '@angular/forms';
+import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
 
@@ -16,17 +16,26 @@ export class RegistrComponent implements OnInit {
   public email;
   public passwordin;
   PersonalAreai;
-
-  constructor(private http: HttpService, private route: Router, private user: UserService) {}
+  FormRegister: FormGroup;
+  constructor(
+    private http: HttpService,
+    private route: Router,
+    private user: UserService,
+    private fb: FormBuilder,
+  ) {}
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
     this.PersonalAreai = this.user.GetCurrentUser();
+    this.FormRegister = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
   }
 
   // tslint:disable-next-line:typedef
-  getRegistr(Form: NgForm) {
-    this.http.post('Author/register', Form.value).subscribe((data: any) => {
+  getRegistr() {
+    this.http.post('Author/register', this.FormRegister.value).subscribe((data: any) => {
       this.Registri = data;
       this.route.navigateByUrl('login');
     });

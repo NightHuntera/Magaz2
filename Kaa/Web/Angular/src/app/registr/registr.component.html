@@ -5,20 +5,22 @@
 
 <body>
   <div class="AuthorizationDiv" >
-  <form #FormReg="ngForm" (submit)="getRegistr(FormReg)" novalidate>
+  <form [formGroup]="FormRegister" (submit)="getRegistr()" novalidate>
     <div class="AuthorizationHead">
     <h1>Регистрация</h1>
     </div>
     <div class="AuthorizationParam">
-      <p for = "Eml" ><span class = "glyphicon glyphicon-envelope" ></span>Email</p>
-      <input type = "email"  name="Mail" ngModel required="required"  >
+      <label *ngIf="FormRegister.controls['email'].invalid" class="WarningInput">Введен некоректный email</label>
+      <p><span class = "glyphicon glyphicon-envelope" ></span>Email</p>
+      <input type = "email"  formControlName="email">
     </div>
     <div class="AuthorizationParam">
-      <p for = "Pass" class = "RegaAvt"><span class = "glyphicon glyphicon-lock" ></span>Пароль</p>
-      <input type = "password"  name="password" ngModel placeholder="минимум 6 символов" required="required" >
+      <label *ngIf="FormRegister.controls['password'].invalid" class="WarningInput">Пароль не менее 6 символов</label>
+      <p class = "RegaAvt"><span class = "glyphicon glyphicon-lock" ></span>Пароль</p>
+      <input type = "password" placeholder="минимум 6 символов" formControlName="password">
     </div>
     <div class = "ButtonDiv">
-      <input type = "submit" name="btn_submit_register" value="Зарегистрироваться" class = "Regivxod">
+      <input type = "submit" name="btn_submit_register" value="Зарегистрироваться" class = "DefaultSubmitButton" [disabled]="FormRegister.invalid">
     </div>
   </form>
     <div class="AuthorizationFoot">

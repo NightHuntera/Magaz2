@@ -7,7 +7,7 @@
     <div class= "headText">
       <input type="button" class="Menu" routerLink="/catalog" value="Каталог"/>
       <input type="button" class="Menu" routerLink="/company" value="О компании"/>
-      <input *ngIf="PersonalAreai.id != null" type="button"  class="Menu" [routerLink]="['profile', 'Avatar']" value="Личный Кабинет" />
+      <input *ngIf="PersonalAreai.id != null" type="button"  class="Menu" routerLink="/profile/Avatar" value="Личный Кабинет" />
       <input *ngIf="PersonalAreai.id != null && PersonalAreai.typeUserID != 2" type="button"  class="Menu" routerLink="/korzina" value = "Корзина" />
       <input *ngIf="PersonalAreai.typeUserID == 2" type="button"  class="Menu" routerLink="/buh" value = "Панель бухгалтера" />
       <input *ngIf="PersonalAreai.id != null" type="button"  class="Menu" (click)="getVixod()" routerLink="/catalog"  value = "Выход" />
@@ -15,7 +15,6 @@
     </div>
   </div>
 <app-alert id="Alert"></app-alert>
-<!--  *ngIf="AlertMessage !== '' "-->
 </header>
 
 

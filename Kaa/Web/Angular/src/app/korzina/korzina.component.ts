@@ -19,7 +19,7 @@ export class KorzinaComponent implements OnInit {
   PersonalAreai;
   Catalogi;
   Updati;
-  private Void: boolean;
+  Void: boolean;
   FormOrder: FormGroup;
 
   // OrderDataModel = [
