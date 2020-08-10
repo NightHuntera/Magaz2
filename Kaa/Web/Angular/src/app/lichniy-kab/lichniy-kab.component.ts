@@ -22,23 +22,23 @@ export class LichniyKabComponent implements OnInit {
      private activateRoute: ActivatedRoute,
      private route: Router
    ) {
-     this.Tab = activateRoute.snapshot.params['tab'];
+     this.Tab = activateRoute.snapshot.params.tab;
    }
-  ngOnInit() {
+  ngOnInit(): void {
     this.PersonalAreai = this.user.GetCurrentUser();
   }
 
-  getPersonalAr() {
+  getPersonalAr(): void {
     this.http.post('PersonalArea', '').subscribe((data: any) => {
       this.PersonalAreai = data;
     });
   }
 
-  ChangePage(Page){
+  ChangePage(Page): void{
      this.route.navigateByUrl('profile/' + Page);
      this.Tab = Page;
   }
 
-  ChangeAvatar(){
+  ChangeAvatar(): void{
   }
 }

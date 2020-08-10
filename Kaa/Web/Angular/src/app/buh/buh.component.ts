@@ -14,15 +14,15 @@ export class BuhComponent implements OnInit {
 
   constructor(private http: HttpService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.GetOrders();
   }
-  PageChange(event) {
+  PageChange(event): void {
     this.Page = event;
     this.GetOrders();
   }
 
-  GetOrders(){
+  GetOrders(): void {
     this.http.post('Basket/OrderStorage',{}).subscribe((data: any) => {
         this.Orders = data;
         console.log(data);

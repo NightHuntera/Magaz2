@@ -34,7 +34,7 @@ export class CatalogComponent implements OnInit {
     private AlertS: AlertService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getCategory();
     this.getSbros();
 
@@ -45,13 +45,13 @@ export class CatalogComponent implements OnInit {
   @ViewChild('KorzinaModal')
   KorzinaModal: BsModalComponent;
 
-  getCategory() {
+  getCategory(): void {
     this.http.get('category').subscribe((data: any) => {
       this.Categori = data;
     });
   }
 
-  getCatalog() {
+  getCatalog(): void {
     const body = {
       CategoryId: this.categorid,
       MaxPrice: this.max,
@@ -63,7 +63,7 @@ export class CatalogComponent implements OnInit {
     });
   }
 
-  getSbros() {
+  getSbros(): void{
     const body = {
       ' CategoryId ': this.categorid,
       ' MaxPrice ': this.max = 1000000,
@@ -74,7 +74,7 @@ export class CatalogComponent implements OnInit {
     });
   }
 
- getKorzina(id) {
+ getKorzina(id): void {
     if (this.PersonalAreai.id === undefined || this.PersonalAreai.id === 0) {
       this.AlertS.VisibleAlert('Необходимо авторизоватся', TypeAlert.Danger);
     } else {
@@ -91,7 +91,7 @@ export class CatalogComponent implements OnInit {
 
 }
 
-  getTovarinfo(id) {
+  getTovarinfo(id): void {
   const body = {
     productID : id,
  };

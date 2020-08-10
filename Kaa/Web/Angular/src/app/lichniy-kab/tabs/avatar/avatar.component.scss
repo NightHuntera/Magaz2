@@ -13,13 +13,14 @@
     position: relative;
     width: 100%;
     float: left;
+    text-align: center;
 
     .Avatar {
-      float: left;
+
       margin-bottom: 19px;
       width: 100%;
-      max-width: 200px;
-      height: 125px;
+      max-width: 175px;
+      height: 175px;
       background-size: cover;
       background-position: top center;
       border-radius: 50%;
@@ -52,8 +53,8 @@
 
 @media screen and (max-width: 750px) {
   .Avatar{
-    width: 75px;
-    height: 75px;
+    width: 100px!important;
+    height: 100px!important;
   }
   .MainPersonalAreai{
     display: flex;

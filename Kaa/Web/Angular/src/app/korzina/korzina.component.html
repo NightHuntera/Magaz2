@@ -5,20 +5,8 @@
       <h2 class="TitleModal">Данные заказа</h2>
       <form [formGroup]="FormOrder" class="BodyModal">
       <div class="AuthorizationParam">
-        <p class = "data"><label>ФИО:</label>
-          <input type="text" formControlName="FIO" ></p>
-      </div>
-      <div class="AuthorizationParam">
-        <p class = "data"><label>Телефон:</label>
-          <input type="text"formControlName="Telefon" ></p>
-      </div>
-      <div class="AuthorizationParam">
         <p class = "data"><label>Адрес:</label>
-          <input type="text" formControlName="Addres" ></p>
-      </div>
-      <div class="AuthorizationParam">
-        <p class = "data"><label>Почтовый индекс:</label></p>
-          <input type="text" formControlName="Postcode">
+          <input type="text" formControlName="Adress" ></p>
       </div>
       <div class = "gl">
         <input type="submit" [disabled]="FormOrder.invalid"  (click)="SubmitOrder()" value="Оформить заказ" class = "DefaultSubmitButton">
@@ -30,10 +18,10 @@
 
 
 
-<div *ngIf="Void ">
+<div *ngIf="Catalogi.length === 0">
   <label class = "LabelVoid">Ваша корзина пуста</label>
 </div>
-<div *ngIf="!Void">
+<div *ngIf="Catalogi.length !== 0">
 
 
 <div *ngFor=" let Catalog of Catalogi" class="MainKorzina">
@@ -52,9 +40,3 @@
     <input type = "submit" (click)=" ModalS.OpenModal('Modal');" class = "zakaz" value = "Оформить заказ">
 </div>
 </div>
-
-
-<!-- <bs-modal #KorzinaModal>-->
-
-<!--</bs-modal>-->
-<!--</div>-->

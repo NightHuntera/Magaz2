@@ -11,9 +11,9 @@ export class AccessBuhGuard implements CanActivate {
         private user: UserService
       ) { }
 
-      canActivate() {
+      canActivate(): boolean {
         const model =  this.user.GetCurrentUser();
-        if (model['typeUserID'] === 2) {
+        if (model.typeUserID === 2) {
             return true;
         } else {
             this.router.navigate(['/main']);

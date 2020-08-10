@@ -14,19 +14,33 @@ import {AlertM} from '../Models/AlertM';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  test;
   PersonalAreai;
   public alerts: Array<AlertM> = [];
 constructor(private http: HttpService, private route: Router, private user: UserService, private AlertS: AlertService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.PersonalAreai = this.user.GetCurrentUser();
-    if (this.PersonalAreai.id === null) {
-      this.getVixod();
+
+    if (this.PersonalAreai !== '') {
+      this.IsAuth();
     }
 
   }
-  getVixod(){
-    this.user.SetIdentity({});
+  getVixod(): void{
+    this.user.LogOut();
     this.PersonalAreai = null;
+  }
+
+  IsAuth(){
+    const body = {
+      UserID : this.PersonalAreai.id,
+    };
+    this.http.post('Basket/BasketStorage', body).subscribe((data: any) => {
+    }, error => {
+      if (error.status === 404){
+        this.getVixod();
+      }
+    });
   }
 }

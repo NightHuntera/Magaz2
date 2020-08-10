@@ -11,9 +11,9 @@ export class AuthGuard implements CanActivate {
         private user: UserService
       ) { }
 
-      canActivate() {
+      canActivate(): boolean {
         const model =  this.user.GetCurrentUser();
-        if (model['id'] != null) {
+        if (model.id != null) {
             return true;
         } else {
             this.router.navigate(['/login']);

@@ -8,7 +8,7 @@
 
   <h2 class="Tovar"> Фильтр по услугам </h2>
     <app-select *ngIf="Categori != undefined" [ParamArray]="Categori" [ParamTitle]="'Категория'"
-                [NameParamDisplay]="'name'" [NameParamOutput]="'id'" (OutputParam)="categorid=$event; getCatalog()"></app-select>
+                [NameParamDisplay]="'nameCategory'" [NameParamOutput]="'id'" (OutputParam)="categorid=$event; getCatalog()"></app-select>
   <div style = "height: 15px;"> </div>
   <div class="DivCat" *ngFor=" let Categor of Categori">
     <img class="imgCat" *ngIf="categorid == Categor.id" src="http://localhost:5000/api/Category/Rec?categoryID= {{Categor.id}}">
@@ -29,7 +29,7 @@
         <label class = "OrderParam"><span class = "opt">{{Catalog.height}}</span></label><br>
     <div class = "OrderFoot">
       <div class = "OrderBuy">
-        <button (click)="getKorzina(Catalog.productID)" class = "DefaultSubmitButton"> Добавить в корзину </button>
+        <button *ngIf="PersonalAreai.typeUserID != 2" (click)="getKorzina(Catalog.productID)" class = "DefaultSubmitButton"> Добавить в корзину </button>
 
       </div>
     </div>

@@ -40,8 +40,8 @@ export class UserService {
     return true;
   }
 
-  public LogOut() {
+  public LogOut(): void {
     this.cookie.deleteCookie(USERCOOKIEKEY);
-    this.http.get('User/Logout').subscribe();
+    // this.http.get('User/Logout').subscribe();
   }
 }

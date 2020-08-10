@@ -14,21 +14,23 @@
     position: relative;
     float: right;
     margin-left: $Big-Margin-Left-Right;
-    width: 70%;
+    width: 30%;
+
     .NickName{
       display: inline;
       position: relative;
       width: 55%;
     }
   }
-  input[type="file"] {
-    display: none;
-  }
   .Title{
     margin-top: 0;
   }
 }
 
+input{
+  text-align: center;
+  box-shadow: 1px 1px 5px  rgba(0,0,0,0.5);
+}
 @media screen and (max-width: 750px) {
 
   .MainPersonalArea{
@@ -43,5 +45,7 @@
     }
   }
 }
-
+p{
+  margin: 0;
+}
 @import 'src/styles/Verstka';

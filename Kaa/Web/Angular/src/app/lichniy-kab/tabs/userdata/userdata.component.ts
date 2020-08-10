@@ -12,11 +12,10 @@ import { UserService } from '../../../Service/user.service';
 export class UserdataComponent implements OnInit {
   PersonalAreai;
 
-  constructor(private http: HttpService, private route:Router, private user:UserService) {}
+  constructor(private http: HttpService, private route: Router, private user: UserService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.PersonalAreai = this.user.GetCurrentUser();
-    console.log(this.PersonalAreai);
   }
 
 }

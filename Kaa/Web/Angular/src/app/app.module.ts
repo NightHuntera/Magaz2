@@ -41,7 +41,9 @@ const appRoutes: Routes = [
 {path: 'login', component: LoginComponent},
 {path: 'profile/:tab', component: LichniyKabComponent, canActivate: [AuthGuard]},
 {path: 'korzina', component: KorzinaComponent, canActivate: [AuthGuard]},
-{path: 'tovarinfo/:id', component: TovarinfoComponent}
+{path: 'tovarinfo/:id', component: TovarinfoComponent},
+{path: 'buh', component: BuhComponent},
+
 ];
 
 @NgModule({

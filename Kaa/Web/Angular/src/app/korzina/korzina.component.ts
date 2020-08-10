@@ -17,17 +17,9 @@ import {TypeAlert} from '../Enum/AlertEnum';
 })
 export class KorzinaComponent implements OnInit {
   PersonalAreai;
-  Catalogi;
+  Catalogi = [];
   Updati;
-  Void: boolean;
   FormOrder: FormGroup;
-
-  // OrderDataModel = [
-  //   new DataModalWindows(TypeObjectModal.InputText, 'ФИО', 'FIO'),
-  //   new DataModalWindows(TypeObjectModal.InputText, 'Телефон', 'Telefon'),
-  //   new DataModalWindows(TypeObjectModal.InputText, 'Адрес', 'Addres'),
-  //   new DataModalWindows(TypeObjectModal.InputText, 'Почтовый индекс', 'Postcode'),
-  // ];
 
   constructor(
     private http: HttpService,
@@ -38,48 +30,39 @@ export class KorzinaComponent implements OnInit {
     private AlertS: AlertService
   ){}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.PersonalAreai = this.user.GetCurrentUser();
     this.getKorzina();
     this.FormOrder = this.fb.group({
       UserID: [this.PersonalAreai.id],
-      Email: [this.PersonalAreai.email],
-      FIO: ['', [Validators.required]],
-      Telefon: ['', [Validators.required]],
-      Addres: ['', [Validators.required]],
-      Postcode: ['', [Validators.required]]
+      Adress: ['', [Validators.required]]
     });
   }
   // tslint:disable-next-line:member-ordering
   @ViewChild('KorzinaModal')
   KorzinaModal: BsModalComponent;
 
-  getKorzina(){
+  getKorzina(): void{
        const body = {
        UserID : this.PersonalAreai.id,
     };
-    this.http.post('Basket/BasketStorage', body).subscribe((data: any) => {
+       this.http.post('Basket/BasketStorage', body).subscribe((data: any) => {
       this.Catalogi = data;
-      if (data.length === 0){
-        this.Void = true;
-      } else {
-        this.Void = false;
-      }
     });
   }
 
- SubmitOrder(){
+ SubmitOrder(): void{
     this.ModalS.CloseModal('Modal');
-    this.AlertS.VisibleAlert('Ошибка при оформлении заказа', TypeAlert.Danger);
-
-    this.http.post('Basket/Order', this.FormOrder.value).subscribe((data: any) => {
+    this.http.post('Basket/OrderAdd', this.FormOrder.value).subscribe((data: any) => {
     this.Catalogi = data;
     this.KorzinaModal.close();
     this.getKorzina();
-  });
+  }, error => {
+      this.AlertS.VisibleAlert(error.message, TypeAlert.Danger);
+    });
 }
 
-  getDeleteOrder(id){
+  getDeleteOrder(id): void{
   const body = {
     basketID : id,
   };
@@ -90,13 +73,13 @@ export class KorzinaComponent implements OnInit {
     });
   }
 
-  getTovarinfo(id){
+  getTovarinfo(id): void{
   const body = {
     productID : id,
   };
   this.http.post('Model/Model', body).subscribe((data: any) => {
   this.route.navigateByUrl('/tovarinfo/' + id);
-   this.Catalogi = data;
+  this.Catalogi = data;
   });
   }
 
