@@ -63,7 +63,7 @@ namespace JericoWebApi.Controllers
                .Select(_ => new CategoryDto
                {
                    ID = _.ID,
-                   Name = _.NameCategory,
+                   NameCategory = _.NameCategory,
                    Description = _.Description
                 
                }).ToList();
@@ -76,7 +76,7 @@ namespace JericoWebApi.Controllers
     public class CategoryDto
     {
         public int ID { get; internal set; }
-        public string Name { get; internal set; }
+        public string NameCategory { get; internal set; }
         public string NameStatus { get; internal set; }
         public string Description { get; internal set; }
     }

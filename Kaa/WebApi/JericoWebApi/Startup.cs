@@ -39,12 +39,20 @@ namespace JericoWebApi
             var key = Encoding.ASCII.GetBytes("Как");
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSession
+                (options =>
+            {
+                options.Cookie.Name = "Афаф";
+
+            }
+                );
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 
                 .AddCookie(options => //CookieAuthenticationOptions
                 {
                     options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
-                    
+                    options.ExpireTimeSpan = TimeSpan.FromHours(1);
+
                 });                
                 
             //cookie.Expires = DateTime.Now.AddYears(1);
