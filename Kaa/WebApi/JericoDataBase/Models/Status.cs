@@ -10,5 +10,6 @@ namespace JericoDataBase.Models
         public int ID { get; set; }
         public string NameStatus { get; set; }
         public ICollection<Basket> Basket { get; set; }
+        public ICollection<Order> Orders { get; set; }
     }
 }

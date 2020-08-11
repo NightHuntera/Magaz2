@@ -124,14 +124,14 @@ namespace JericoWebApi.Controllers
             {
                 return BadRequest();
             }
-            User check = dbContext.Users.FirstOrDefault(u => u.Email == regist.Mail);
+            User check = dbContext.Users.FirstOrDefault(u => u.Email == regist.email);
             if (check != null)
             {
                 return Json("Такой E-mail уже зарегистрирован");
             }
             //обрезаем мыло
             char atSign = '@';
-            string login = regist.Mail.Split(atSign)[0];
+            string login = regist.email.Split(atSign)[0];
             PersonalArea personalArea = new PersonalArea()
             {
                 Telefon = "Заполните данные",
@@ -157,7 +157,7 @@ namespace JericoWebApi.Controllers
             User user = new User()
             {
                 Login = login,
-                Email = regist.Mail,
+                Email = regist.email,
                 Password = regist.Password,
                 TypeUserID = 3,
                 PersonalAreaID = personalArea.ID,
@@ -261,7 +261,7 @@ namespace JericoWebApi.Controllers
         public class Regist
         {
             [EmailAddress]
-            public string Mail;
+            public string email;
             public string Password;
             
         }
