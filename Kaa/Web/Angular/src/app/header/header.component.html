@@ -7,11 +7,13 @@
     <div class= "headText">
       <input type="button" class="Menu" routerLink="/catalog" value="Каталог"/>
       <input type="button" class="Menu" routerLink="/company" value="О компании"/>
-      <input *ngIf="PersonalAreai.id != null" type="button"  class="Menu" routerLink="/profile/Avatar" value="Личный Кабинет" />
-      <input *ngIf="PersonalAreai.id != null && PersonalAreai.typeUserID != 2" type="button"  class="Menu" routerLink="/korzina" value = "Корзина" />
-      <input *ngIf="PersonalAreai.typeUserID == 2" type="button"  class="Menu" routerLink="/buh" value = "Панель бухгалтера" />
-      <input *ngIf="PersonalAreai.id != null" type="button"  class="Menu" (click)="getVixod()" routerLink="/catalog"  value = "Выход" />
-      <input *ngIf="PersonalAreai.id == null" type="button" class="Menu" routerLink="/login" value="Вход / Регистрация"/>
+      <input *ngIf="PersonalAreai != ''&& PersonalAreai.id != null" type="button"  class="Menu" routerLink="/profile/Avatar" value="Личный Кабинет" />
+      <input *ngIf="PersonalAreai != ''&& PersonalAreai.id != null && PersonalAreai.typeUserID != 2"
+                                              type="button"  class="Menu" routerLink="/korzina" value = "Корзина" />
+      <input *ngIf="PersonalAreai != ''&& PersonalAreai.typeUserID == 2"
+                                              type="button"  class="Menu" routerLink="/buh" value = "Панель бухгалтера" />
+      <input *ngIf="PersonalAreai != ''" type="button"  class="Menu" (click)="getVixod()" routerLink="/catalog"  value = "Выход" />
+      <input *ngIf="PersonalAreai == ''" type="button" class="Menu" routerLink="/login" value="Вход / Регистрация"/>
     </div>
   </div>
 <app-alert id="Alert"></app-alert>

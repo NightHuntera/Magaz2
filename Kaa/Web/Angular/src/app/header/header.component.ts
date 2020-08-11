@@ -21,7 +21,6 @@ constructor(private http: HttpService, private route: Router, private user: User
 
   ngOnInit(): void {
     this.PersonalAreai = this.user.GetCurrentUser();
-
     if (this.PersonalAreai !== '') {
       this.IsAuth();
     }

@@ -3,6 +3,10 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import "Authorization style";
 @import "ModalS";
+
+body{
+  min-width: 200px;
+}
 .Select{
   position: relative;
   color: black;
@@ -61,5 +65,5 @@
   padding: 0px;
   margin-top:$Standart-Margin-Bottom-Top;
 }
-
+@import "Verstka";
 
