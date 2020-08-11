@@ -17,7 +17,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace JericoWebApi.Controllers
 {
-    [Authorize]
+    
     [EnableCors("CorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
@@ -183,6 +183,26 @@ namespace JericoWebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> OrderStorage([FromBody] BasketAdd front)
         {
+            var Basket = dbContext
+                .Baskets
+                .Include(_ => _.User.Orders)
+                .Include(_ => _.User.PersonalArea)
+                
+                .Where(_ => _.User.ID == front.UserID && _.StatusID != 1)
+                .Select(_ => new Baskets
+                {
+                    BasketID = _.ID,
+                    ProductID = _.Product.ID,
+                    NameProduct = _.Product.Model.NameModel,
+                    Amount = _.Amount,
+                    UserID = _.User.ID,
+                    Email = _.User.Email,
+                    Name = _.User.PersonalArea.FIO,
+                    Status = _.Status.NameStatus
+
+
+                }).ToList();
+
             var Order = dbContext
                 .Orders
                 .Include(_=>_.Status)
@@ -191,12 +211,13 @@ namespace JericoWebApi.Controllers
                 .Select(_ => new Orders
                 {
                     OrderID = _.ID,
+                    UserID = _.User.ID,
                     Email = _.User.Email,
                     Name = _.User.PersonalArea.FIO,
                     Status = _.Status.NameStatus
 
                 }).ToList();
-             return Json(Order);
+             return Json(Basket);
             
         }
 
@@ -251,6 +272,7 @@ namespace JericoWebApi.Controllers
     public class Orders
     {
         public int OrderID { get; internal set; }
+        public int UserID { get; internal set; }
         public string Name { get; internal set; }
         public string Email { get; internal set; }
         public string Status { get; internal set; }
@@ -262,7 +284,12 @@ namespace JericoWebApi.Controllers
         public string NameProduct { get; internal set; }
         public int Price { get; internal set; }
         public int Amount { get; internal set; }
-        public int Status { get; internal set; }
+        public string Status { get; internal set; }
+        public int OrderID { get; internal set; }
+        public int UserID { get; internal set; }
+        public string Name { get; internal set; }
+        public string Email { get; internal set; }
+        
     }
 
     public class OrderAdd
