@@ -1,4 +1,23 @@
+@import "./src/styles/varibles";
+
+.Main{
+  margin:$Standart-Margin-Bottom-Top $Big-Margin-Left-Right $Standart-Margin-Bottom-Top $Big-Margin-Left-Right ;
+}
+
 .table{
   top: 60px;
   position: relative;
+  margin-bottom:$Standart-Margin-Bottom-Top;
+  .HeadTable{
+    border: none;
+    background-color: darkgray;
+  }
+  .CellTable:nth-child(2n+1){
+    background-color: lightgray;
+
+  }
+  .CellTable:nth-child(2n){
+    background-color: lightgray;
+    filter: brightness(110%);
+  }
 }

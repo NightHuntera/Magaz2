@@ -29,7 +29,7 @@
         <label class = "OrderParam"><span class = "opt">{{Catalog.height}}</span></label><br>
     <div class = "OrderFoot">
       <div class = "OrderBuy">
-        <button *ngIf="PersonalAreai.typeUserID != 2" (click)="getKorzina(Catalog.productID)" class = "DefaultSubmitButton"> Добавить в корзину </button>
+        <button *ngIf="PersonalAreai.typeUserID == 1" (click)="getKorzina(Catalog.productID)" class = "DefaultSubmitButton"> Добавить в корзину </button>
 
       </div>
     </div>

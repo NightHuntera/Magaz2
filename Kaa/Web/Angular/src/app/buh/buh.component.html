@@ -1,21 +1,25 @@
 
-<div>
   <app-header></app-header>
-</div>
 
+<div class="Main">
 <table class="table">
   <h1>Заказы</h1>
-  <tr >
-    <th>Название</th>
-    <th>Цена</th>
-    <th>Количество</th>
+  <tr class="HeadTable">
+    <th>Заказчик</th>
+    <th>Номер</th>
+    <th>Услуги</th>
+    <th>Дата заказа</th>
+    <th>Статус</th>
   </tr>
 
-  <tr *ngFor="let order of Orders | paginate: { itemsPerPage: PageSize, currentPage: Page, totalItems:Pages }" >
+  <tr class="CellTable" *ngFor="let order of Orders | paginate: { itemsPerPage: PageSize, currentPage: Page, totalItems:Pages }" >
     <td>{{order.nameProduct}}</td>
+    <td>{{order.price}}</td>
+    <td>{{order.amount}}</td>
     <td>{{order.price}}</td>
     <td>{{order.amount}}</td>
 
   </tr>
   <pagination-controls class="my-pagination"  (pageChange)="PageChange($event)" nextLabel='Далее' previousLabel='Назад'></pagination-controls>
 </table>
+</div>

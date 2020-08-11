@@ -26,7 +26,7 @@ export class AvatarComponent implements OnInit {
     this.scrAV = this.http.api + 'Author/Rec?UserID=' + this.PersonalAreai.id;
   }
 
-  ChangePhoto(event) {
+  ChangePhoto(event): void {
     if (event.length > 0) {
       this.http.makeFileRequest('Author/UploadFiles', event).then( data => {
         this.AlertS.VisibleAlert('Аватар успешно изменен', TypeAlert.Success);
