@@ -1,11 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpService} from '../Service/http.service';
-import { NgForm} from '@angular/forms';
+import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import {BsModalComponent} from 'ng2-bs3-modal';
 import { UserService } from '../Service/user.service';
 import { Router } from '@angular/router';
 import {AlertService} from '../Service/alert.service';
 import {TypeAlert} from '../Enum/AlertEnum';
+import {ModalService} from '../Service/modal.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -26,19 +27,24 @@ export class CatalogComponent implements OnInit {
   public amount;
   Korzini;
   public catalog;
+  FormDescription: FormGroup;
 
   constructor(
     private http: HttpService,
     private route: Router,
     private user: UserService,
-    private AlertS: AlertService
+    private AlertS: AlertService,
+    public ModalS: ModalService,
+    private fb: FormBuilder,
   ) {}
 
   ngOnInit(): void {
     this.getCategory();
-    this.getSbros();
-
+    this.getCatalog();
     this.PersonalAreai = this.user.GetCurrentUser();
+    this.FormDescription = this.fb.group({
+      Description: [0],
+    });
   }
 
   // tslint:disable-next-line:member-ordering
@@ -63,17 +69,6 @@ export class CatalogComponent implements OnInit {
     });
   }
 
-  getSbros(): void{
-    const body = {
-      ' CategoryId ': this.categorid,
-      ' MaxPrice ': this.max = 1000000,
-      ' MinPrice ': this.min = 0,
-    };
-    this.http.post('catalog/Catalog', body).subscribe((data: any) => {
-      this.Catalogi = data;
-    });
-  }
-
  getKorzina(id): void {
     if (this.PersonalAreai.id === undefined || this.PersonalAreai.id === 0) {
       this.AlertS.VisibleAlert('Необходимо авторизоватся', TypeAlert.Danger);
@@ -90,6 +85,11 @@ export class CatalogComponent implements OnInit {
   }
 
 }
+
+  OpenInfoModal(Description): void {
+    this.FormDescription.controls.Description.setValue(Description);
+    this.ModalS.OpenModal('Modal');
+  }
 
   getTovarinfo(id): void {
   const body = {

@@ -7,12 +7,12 @@ export class ModalService {
 
   constructor() { }
 
-  OpenModal(id){
+  OpenModal(id = 'Modal'){
     // @ts-ignore
     document.getElementById(id).style.display = 'block';
   }
 
-  CloseModal(id){
+  CloseModal(id = 'Modal'){
     document.getElementById(id).style.display = 'none';
   }
 }

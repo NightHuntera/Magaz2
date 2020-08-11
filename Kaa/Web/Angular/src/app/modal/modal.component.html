@@ -1,8 +1,8 @@
-
+<div class="FormModalBody">
 <div *ngFor = "let dat of Data">
   <div class="AuthorizationParam" *ngIf="dat.Type === 'InputText'">
       <p class = "data"><label>{{dat.Name}}</label>
       <input type="text" [name]="dat.tag" ></p>
   </div>
 </div>
-
+</div>

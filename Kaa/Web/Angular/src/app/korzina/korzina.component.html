@@ -1,13 +1,16 @@
 
   <app-header ></app-header>
+
   <div class="MainModal" [id]="'Modal'">
     <div class="DivModal">
       <h2 class="TitleModal">Данные заказа</h2>
       <form [formGroup]="FormOrder" class="BodyModal">
-      <div class="AuthorizationParam">
-        <p class = "data"><label>Адрес:</label>
-          <input type="text" formControlName="Adress" ></p>
-      </div>
+        <div class="FormModalBody">
+          <div class="AuthorizationParam">
+            <p class = "data"><label>Адрес:</label>
+              <input type="text" formControlName="Adress" ></p>
+          </div>
+        </div>
       <div class = "gl">
         <input type="submit" [disabled]="FormOrder.invalid"  (click)="SubmitOrder()" value="Оформить заказ" class = "DefaultSubmitButton">
         <input type="button" (click)="ModalS.CloseModal('Modal')" value="Закрыть окно" class = "DefaultSubmitButton">

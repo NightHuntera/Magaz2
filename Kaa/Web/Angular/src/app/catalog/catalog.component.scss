@@ -123,4 +123,13 @@ header{
       font-size: 12px;
     }
   }
+  .DivCat{
+    height: auto;
+    .descriptionCat{
+      height: 0;
+      visibility: collapse;
+    }
+  }
+
+
 }
