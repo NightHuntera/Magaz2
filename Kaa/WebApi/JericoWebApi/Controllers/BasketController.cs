@@ -114,36 +114,15 @@ namespace JericoWebApi.Controllers
 
 
 
-
-            /*  SmtpClient smtp = new SmtpClient("smtp.mail.ru", 587);
+/*
+              SmtpClient smtp = new SmtpClient("smtp.mail.ru", 587);
               smtp.Credentials = new NetworkCredential("jerico.company@mail.ru", "V1357Olqa");
               MailAddress from = new MailAddress("jerico.company@mail.ru", "Jerico");
-              MailAddress to = new MailAddress(order.Email);
+              MailAddress to = new MailAddress("jerico.company@mail.ru");
               MailMessage m = new MailMessage(from, to);
-
-              User user = dbContext
-                  .Users
-                  .Include(_ => _.PersonalArea)
-                  .FirstOrDefault(_ => _.ID == order.UserID);
-
-              foreach (Basket customer in customers
-                  .Include(_ => _.Product)
-                  .Include(_ => _.Product.Model)
-                  .Include(_ => _.User)
-                  .Where(_ => _.User.ID == order.UserID)
-                  .ToList())
-                  asda += customer.Product.Model.NameModel + " в количестве: " + customer.Amount + " Шт.<br>";
-
-              foreach (Basket customer in customers
-                  .Include(_ => _.Product)
-                  .Include(_ => _.Product.Model)
-                  .Include(_ => _.User)
-                  .Where(_ => _.User.ID == order.UserID)
-                  .ToList())
-
-
+            
               m.Subject = "Ваш заказ <Jerico>";
-              m.Body =  "<h2>Здравствуйте уважаемый " + order.FIO + "</h2><br>" +
+              m.Body =  "<h2>Здравствуйте уважаемый " +  + "</h2><br>" +
                         "<label>Ваш заказ под номером " + "<br>" +
                         "Принят на обработку <br>" +
                         "В него входят такие товары, как : <br>" +
@@ -156,8 +135,8 @@ namespace JericoWebApi.Controllers
               m.BodyEncoding = Encoding.UTF8;
               smtp.EnableSsl = true;
               smtp.Send(m);
-              m.Dispose();*/
-
+              m.Dispose();
+              */
 
             var Basket = dbContext
                  .Baskets
@@ -188,7 +167,7 @@ namespace JericoWebApi.Controllers
                 .Include(_ => _.User.Orders)
                 .Include(_ => _.User.PersonalArea)
                 
-                .Where(_ => _.User.ID == front.UserID && _.StatusID != 1)
+                .Where(_ =>  _.StatusID != 1)
                 .Select(_ => new Baskets
                 {
                     BasketID = _.ID,
