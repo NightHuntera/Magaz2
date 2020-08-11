@@ -1,0 +1,15 @@
+@import "src/app/lichniy-kab/tabs/avatar/avatar.component";
+
+
+@media screen and (max-width: 750px) {
+  .MainPersonalAreai{
+    right: 100%;
+    width: 300%;
+    margin-bottom: 50px;
+
+    .DivPersonalAreai{
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

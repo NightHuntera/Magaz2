@@ -1,34 +1,9 @@
-
-  <app-header></app-header>
-
-  <div class="MainModal" [id]="'ModalCancel'">
-    <div class="DivModal">
-      <h2 class="TitleModal">Отклонение заказа</h2>
-      <form [formGroup]="FormCancel" class="BodyModal">
-        <div class="FormModalBody">
-          <div class="AuthorizationParam">
-            <label *ngIf="FormCancel.controls['Reason'].invalid" class="WarningInput">Не менее 10 символов</label>
-            <p class = "data"><label>Причина отказа</label>
-              <textarea formControlName="Reason" ></textarea></p>
-          </div>
-        </div>
-        <div class = "ModalFoot">
-          <input type="submit" [disabled]="FormCancel.invalid"  (click)="CanselOrder()" value="Отклонить заказ" class = "DefaultSubmitButton">
-          <input type="button" (click)="ModalS.CloseModal('ModalCancel')" value="Закрыть окно" class = "DefaultSubmitButton">
-        </div>
-      </form>
-    </div>
-  </div>
-
-
-<div class="Main">
-
+<div class = "MainPersonalAreai">
 <table class="table">
   <h1>Заказы</h1>
   <app-select [ParamArray]="PagginationArray" [ParamTitle]="'Количество заказов'" [NameParamDisplay]="'Count'"
               [NameParamOutput]="'Count'" (OutputParam)="PageSize=$event"></app-select>
   <tr class="HeadTable">
-    <th>Заказчик</th>
     <th>Номер</th>
     <th>Услуга</th>
     <th>Дата заказа</th>
@@ -37,7 +12,6 @@
   </tr>
 
   <tr class="CellTable" *ngFor="let order of Orders | paginate: { itemsPerPage: PageSize, currentPage: Page, totalItems:Pages }" >
-    <td>{{order.name}}</td>
     <td>{{order.amount}}</td>
     <td>{{order.nameProduct}}</td>
     <td>{{order.price}}</td>
@@ -52,6 +26,3 @@
 
 </table>
 </div>
-
-
-

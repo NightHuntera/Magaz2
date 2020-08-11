@@ -33,6 +33,7 @@ import {AlertService} from "./Service/alert.service";
 import { SelectComponent } from './select/select.component';
 import { AvatarComponent } from './lichniy-kab/tabs/avatar/avatar.component';
 import { ModalComponent } from './modal/modal.component';
+import { HistoryOrderComponent } from './lichniy-kab/tabs/history-order/history-order.component';
 const appRoutes: Routes = [
 {path: '', component: CatalogComponent},
 {path: 'company', component: CompanyComponent },
@@ -63,7 +64,8 @@ const appRoutes: Routes = [
     AlertComponent,
     SelectComponent,
     AvatarComponent,
-    ModalComponent
+    ModalComponent,
+    HistoryOrderComponent
   ],
     imports: [
         BrowserModule,

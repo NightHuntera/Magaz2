@@ -6,6 +6,8 @@
   <div class = "Options">
       <p> <span class = "glyphicon glyphicon-home"></span> <input type = "submit"
                 value = "Главная" class = "DefaultSubmitButton" (click)="ChangePage('Avatar')"></p>
+      <p> <span class = "glyphicon glyphicon-book"></span> <input type = "submit"
+                value = "Заказы" class = "DefaultSubmitButton" (click)="ChangePage('historyOrder')"></p>
       <p> <span class = "glyphicon glyphicon-user"></span> <input type = "submit"
                 value = "Личные данные" class = "DefaultSubmitButton" (click)="ChangePage('PersonalArea')"></p>
       <p> <span class = "glyphicon glyphicon-cog"></span> <input type = "submit"
@@ -13,6 +15,7 @@
 
     </div>
     <app-avatar *ngIf="Tab === 'Avatar'" class="InfoBlock" (Reload)="ChangeAvatar()"></app-avatar>
+  <app-history-order *ngIf="Tab === 'historyOrder'" class="InfoBlock"></app-history-order>
   <app-userdata *ngIf="Tab === 'PersonalArea'" class="InfoBlock"></app-userdata>
   <app-usersettings *ngIf="Tab === 'Setting'" class="InfoBlock"></app-usersettings>
 </div>

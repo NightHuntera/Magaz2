@@ -56,7 +56,6 @@ export class KorzinaComponent implements OnInit {
     this.ModalS.CloseModal('Modal');
     this.http.post('Basket/OrderAdd', this.FormOrder.value).subscribe((data: any) => {
     this.Catalogi = data;
-    this.KorzinaModal.close();
     this.getKorzina();
   }, error => {
       this.AlertS.VisibleAlert(error.message, TypeAlert.Danger);

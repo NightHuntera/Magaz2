@@ -26,14 +26,14 @@
   }
   .main{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     height: 100%;
     .Options{
       border: none;
       padding: 0;
-      border-top: 1px solid black;
-      padding-top: $Standart-Margin-Bottom-Top;
+      border-bottom: 1px solid black;
+      margin-bottom: $Standart-Margin-Bottom-Top;
     }
   }
   .InfoBlock{

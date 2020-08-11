@@ -42,7 +42,7 @@ export class AlertService {
 
   }
 
-  HiddenAlert(): void{
+  HiddenAlert(): void {
     // @ts-ignore
     document.getElementById('Alert').getElementsByClassName('Alert')[0].style.display = 'none';
     clearTimeout(this.TimerInterval);

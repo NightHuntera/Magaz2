@@ -1,0 +1,42 @@
+@import "varibles";
+
+.table{
+  top: 60px;
+  position: relative;
+  margin-bottom:$Standart-Margin-Bottom-Top;
+  .HeadTable{
+    text-align: center;
+    border: none;
+    background-color: darkgray;
+    th{
+      text-align: center;
+    }
+  }
+  .CellTable:nth-child(2n+1){
+    text-align: center;
+    background-color: lightgray;
+
+  }
+  .CellTable:nth-child(2n){
+    text-align: center;
+    background-color: lightgray;
+    filter: brightness(110%);
+  }
+  .ButtonTableCont{
+    display: flex;
+    justify-content: space-around;
+    .ButtonTable{
+      outline: none;
+      border: 1px solid gainsboro;
+      border-radius:$Border-Radius ;
+      background-color: rgba(121, 121, 121, 0.2);
+    }
+    .Cancel:hover{
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+    .Success:hover{
+      background-color: rgb(56, 255, 0, 0.5);
+    }
+  }
+
+}

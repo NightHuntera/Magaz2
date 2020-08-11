@@ -70,17 +70,18 @@ export class CatalogComponent implements OnInit {
   }
 
  getKorzina(id): void {
-    if (this.PersonalAreai.id === undefined || this.PersonalAreai.id === 0) {
+    if (this.PersonalAreai === '' || this.PersonalAreai.id === 0) {
       this.AlertS.VisibleAlert('Необходимо авторизоватся', TypeAlert.Danger);
     } else {
       const body = {
         UserID : this.PersonalAreai.id,
         productID : id,
         Amount : this.amount = 1,
-    };
+      };
       this.http.post('Basket/BasketAdd', body).subscribe((data: any) => {
-        this.Catalogi = data;
-        this.AlertS.VisibleAlert('Товар добавлен в корзину', TypeAlert.Success);
+        this.AlertS.VisibleAlert(data, TypeAlert.Success);
+      },error => {
+        this.AlertS.VisibleAlert(error.error, TypeAlert.Danger);
       });
   }
 
