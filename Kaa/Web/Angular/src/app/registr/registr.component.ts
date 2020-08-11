@@ -3,6 +3,8 @@ import {HttpService} from '../Service/http.service';
 import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
+import {AlertService} from '../Service/alert.service';
+import {TypeAlert} from "../Enum/AlertEnum";
 
 @Component({
   selector: 'app-registr',
@@ -22,6 +24,7 @@ export class RegistrComponent implements OnInit {
     private route: Router,
     private user: UserService,
     private fb: FormBuilder,
+    private AlertS: AlertService,
   ) {}
 
   // tslint:disable-next-line:typedef
@@ -37,7 +40,10 @@ export class RegistrComponent implements OnInit {
   getRegistr() {
     this.http.post('Author/register', this.FormRegister.value).subscribe((data: any) => {
       this.Registri = data;
-      this.route.navigateByUrl('login');
+      this.AlertS.VisibleAlert('Письмо для подтверждения отправлено на вашу почту', TypeAlert.Success);
+      this.FormRegister.reset();
+    }, error => {
+      this.AlertS.VisibleAlert(error.message, TypeAlert.Danger);
     });
   }
 }

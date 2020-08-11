@@ -11,7 +11,7 @@
             <p class = "data"><label>{{FormDescription.value.Description}}</label></p>
           </div>
         </div>
-        <div class = "gl">
+        <div class = "ModalFoot">
           <input type="button" (click)="ModalS.CloseModal('Modal')" value="Закрыть окно" class = "DefaultSubmitButton">
         </div>
       </form>
@@ -31,7 +31,7 @@
   <div class="DivCat" *ngFor=" let Categor of Categori">
     <img class="imgCat" *ngIf="categorid == Categor.id" src="http://localhost:5000/api/Category/Rec?categoryID= {{Categor.id}}">
     <p class="descriptionCat" *ngIf="categorid == Categor.id">{{Categor.description}}</p>
-    <button  *ngIf="categorid == Categor.id" class="DefaultSubmitButton" (click)="OpenInfoModal(Categor.description)">Описание</button>
+    <button  *ngIf="categorid == Categor.id" class="DefaultSubmitButton collapse" (click)="OpenInfoModal(Categor.description)">Описание</button>
   </div>
   </div>
 </div>
